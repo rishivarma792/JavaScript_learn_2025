@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="case-1" onclick="alert('in html')">
+        <h2>mouse events</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, esse id saepe fugiat qui debitis tenetur? Voluptatem labore veniam ex incidunt perferendis est, excepturi fugiat totam necessitatibus reprehenderit officiis quos, enim, perspiciatis suscipit at quisquam culpa! Harum facere architecto, corporis quas illo nostrum accusantium temporibus quibusdam eos recusandae pariatur et impedit eveniet eaque quia vero sint delectus minus? In, aliquam quas similique ipsam debitis excepturi laboriosam? Sapiente cupiditate odio exercitationem aliquam deleniti numquam, iure cumque autem sed, et ad doloribus, dolor deserunt? Odio earum qui molestiae consequuntur voluptatibus optio. Voluptatum provident sed aspernatur qui assumenda nihil? Error nihil suscipit autem.</p>
+    </div>
+    <script>
+
+        // CASE 1 : MOUSE EVENTS : 
+        let div1 = document.querySelector('.case-1'); 
+        div1.onclick = function (){
+            alert("in js ");  // overides 
+        }
+        div1.onclick = function (){
+            alert("in js2 ");  // overides 
+        }
+        div1.onclick = null ; 
+    </script>
+</body>
+</html>

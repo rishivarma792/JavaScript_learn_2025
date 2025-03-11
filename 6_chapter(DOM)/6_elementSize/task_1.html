@@ -1,0 +1,45 @@
+<!-- 
+->how to get scroll bottom using scroll top 
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .task-1{
+            width: 300px;
+            height: 200px;
+            overflow: auto;
+            border: 25px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="task-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus obcaecati possimus ab corrupti laudantium nam enim, temporibus impedit consectetur fugiat veritatis praesentium unde. Quo provident ut est porro esse similique illum explicabo ex, reiciendis neque vitae? Sed delectus officia omnis, quae impedit autem aspernatur ipsa fugit soluta ipsam quaerat ut unde vero deleniti inventore magni illo earum reiciendis accusantium perferendis recusandae tempore suscipit obcaecati excepturi. Nihil non, veritatis corporis rerum sed obcaecati autem itaque voluptas dolores excepturi accusantium necessitatibus quibusdam doloremque placeat nostrum reprehenderit error dicta, illo unde neque totam quia tempore natus? Consequuntur maxime ipsum suscipit non alias nihil.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, autem beatae, provident quidem impedit temporibus cupiditate, sapiente nisi ipsum quae labore incidunt! Molestias quo corrupti doloribus, est sequi vel provident voluptatum distinctio reprehenderit maxime illum veniam perspiciatis incidunt magni qui ratione, quis consectetur neque dolore, vero cum id! Numquam veritatis dicta iste adipisci itaque possimus iure quos quas reprehenderit, voluptatum excepturi, repudiandae vero tempora. Quibusdam, adipisci? Hic eos iure quod aliquam illo in itaque quaerat modi quasi quo voluptatem quos quisquam, culpa animi vel quibusdam, numquam accusantium mollitia? Cupiditate asperiores delectus quaerat porro itaque, consectetur natus quasi voluptas illo aliquid.
+    </div>
+
+    <script>
+        
+        let div1 = document.querySelector(".task-1") ; 
+        let div12 = document.getElementsByClassName("task-1")[0] ; 
+
+
+        console.log(div1.scrollTop);
+        console.log(div12);
+
+
+
+    </script>
+    
+</body>
+</html>

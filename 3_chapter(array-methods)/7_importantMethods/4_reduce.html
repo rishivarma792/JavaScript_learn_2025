@@ -1,0 +1,27 @@
+<!-- 
+->Reduce : 
+->return a single value 
+->((previousValue,el,index,arr),intialvalue) 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // reduce 
+         let arr1 = [1,2,3] ; 
+         let resut1 = arr1.reduce((previousValue,current,index,arr)=>{
+       return previousValue+current;
+         },0)
+         console.log(resut1);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .invalid{
+            border: 1px solid red;
+        }
+        #error1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="case-1">
+        Enter yout email <input type="email" id="input1">
+
+        <div id="error1"></div>
+    </div>
+
+    <script>
+//    CASE 1 : EXAMPLE OF INPUT IN FOCUS AND BLUR 
+    let input1 = document.getElementById("input1") ; 
+    let errorBox1 = document.getElementById("error1"); 
+    
+    input1.onblur = function (e) {
+        if(!input1.value.includes("@")){
+            input1.classList.add("invalid") ; 
+            errorBox1.innerText = "Plese enter a valid email"; 
+        }
+    }
+    input1.onfocus = function (e){
+        if(input1.classList.contains("invalid")){
+            input1.classList.remove("invalid") ; 
+        }
+        errorBox1.innerText = ""; 
+        
+    }
+
+    </script>
+    
+</body>
+</html>

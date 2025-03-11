@@ -1,0 +1,32 @@
+<!-- clear everythin from the element  -->
+
+<ol id="elem">
+    <li>Hello</li>
+    <li>World</li>
+  </ol>
+  
+  <script>
+    let elem  = document.getElementById('elem') ; 
+    function clear(elem) {
+      
+        // one : 
+    //   for(let li of elem.children){
+    //     console.log(li);
+    //     li.remove() ; 
+    //   }  will not work 
+
+    // // two : best way to to do 
+    // while(elem.firstChild){
+    //     console.log(elem.firstChild);
+    //     elem.firstChild.remove() ; 
+    // }
+
+    // threee : 
+    console.log(elem);
+    console.log(elem.innerHTML);    
+    elem.innerHTML="";
+        
+        }
+      
+    clear(elem); // clears the list
+  </script>

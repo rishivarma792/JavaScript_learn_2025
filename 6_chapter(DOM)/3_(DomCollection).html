@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>THis is first child</h1>
+    <p>this is second child</p>
+    <div>
+        <h3>in div</h3>
+    </div>
+    <h4>this is 4th child</h4>
+
+    <script>
+        // dom collection 
+        let domCollection1 = document.body.childNodes ; 
+        console.log(domCollection1[0]); 
+        for(let a of domCollection1){   // we can iterate 
+            console.log(a);
+        }
+
+        // we can use for of
+        let domCollectionArray = Array.from(domCollection1);
+       
+
+    </script>
+    
+</body>
+</html>

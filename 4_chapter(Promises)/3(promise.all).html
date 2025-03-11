@@ -1,0 +1,82 @@
+<!--
+->Promise.all()-> . 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    // case -1 : 
+    const prom1 = new Promise((resolve,reject)=>{
+        resolve("done") ;
+        // reject("not done1") ;   
+    })
+    const prom2 = new Promise ((resolve,reject)=>{
+        resolve("done2");
+        // reject("not done2") 
+
+    })
+
+    Promise.all([prom1,prom2]).then((val)=>{
+     console.log(val);
+
+    },(err)=>{
+        console.log(err);
+
+    })
+
+    console.log("CASE2");
+    // case -2 check short circuit of promise all 
+//     const prom3 = new Promise((resolve,reject)=>{
+//         reject("rejected prom3");
+//     })
+//     const prom4 = new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             console.log("timeout function executed") ; 
+//             resolve("prom4 done") ; 
+//         }, 3000);  
+//     }) ; 
+    
+//     Promise.all([prom3,prom4]).then((val)=>{
+// console.log(val) ; 
+//     },(err)=>{
+//        console.log(err) ; 
+//     })
+
+    // case 3 : synchronous nature of all 
+    // const prom5 = Promise.all([]); //only when iterator passed is empty
+    // console.log(prom5);
+
+    // CASE 4 : WE CAN ASLO MAKE SURE COMPLETE PROMISES IN ARRAY CANT BE REJECTED USING CATCH 
+   
+//     const p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => resolve("p1_delayed_resolution"), 1000);
+// });
+
+// const p2 = new Promise((resolve, reject) => {
+//   reject(new Error("p2_immediate_rejection"));
+// });
+
+// Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
+//   (values) => {
+//     console.log(values[0]); // "p1_delayed_resolution"
+//     console.error(values[1]); // "Error: p2_immediate_rejection"
+//   },
+// );
+
+    
+     
+     
+    
+    
+    </script>
+    
+</body>
+</html>

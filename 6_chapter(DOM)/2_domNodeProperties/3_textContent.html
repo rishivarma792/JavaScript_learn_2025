@@ -1,0 +1,52 @@
+<!-- 
+->text content 
+->hidden property  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <div class="content-1">
+            <h1>hello</h1>
+            <h2>THis is rishi</h2>
+        </div>
+        <div class="ele-1"></div>
+        <div class="ele-2"></div>
+
+    </div>
+
+    <div class="case-2">
+     <div id="el-3">blinking ellement</div>
+    </div>
+    <script>
+
+        // CASE 1 : how textContnet show avoiding html tags 
+        let content1 =  document.getElementsByClassName('content-1')[0] ; 
+        console.log(content1.textContent); // gives all the text leaving the tags 
+
+        let el1 = document.getElementsByClassName('ele-1')[0] ; 
+        let el2 = document.getElementsByClassName('ele-2')[0] ; 
+        let name1 = prompt("what your name" , "<b>rishi</b>");
+        el1.innerHTML = name1 ; 
+        el2.textContent = name1 ; 
+
+        // CASE2 : HIDDEN 
+        let blinkingEl2 = document.getElementById('el-3') ; 
+        // setInterval(()=>{
+        //    blinkingEl2.hidden = !blinkingEl2.hidden ;  
+        // },1000)
+
+
+
+    
+    </script>
+    
+</body>
+</html>

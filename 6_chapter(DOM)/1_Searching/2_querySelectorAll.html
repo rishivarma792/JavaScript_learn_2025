@@ -1,0 +1,68 @@
+<!-- 
+->querySleAll :  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+     ul:first-child {
+        background-color: black;
+     }
+
+    </style>
+</head>
+<body>
+  <div class="case-1">
+
+      <ul>
+          <li>The</li>
+          <li>test</li>
+        </ul>
+        <ul>
+            <li>has</li>
+            <li>passed</li>
+        </ul>
+    </div>
+
+    <div class="case-2">
+        <ul id="list-2">
+            <li>one</li>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+    </div>
+
+    <script>
+//   case -1 : we can pass a selector 
+// let lastList = document.querySelectorAll('ul:last-child > li');  // ul:last child represnt the second ul
+// // it returns a static node list 
+// console.log(lastList);
+
+// // OPERATION ON THE NODElIST :  keys entrie values 
+// console.log(lastList.forEach((a)=>{
+//     console.log(a) ; 
+// }))
+
+// CASE 2 : BEING STATIC NODE LIST CANT BE UPDATED LIVE 
+ let itemsList2 = document.querySelectorAll(".case-2 ul>li");
+//  here itemList2 is a static node list even after adding another li it wond update live
+ let ul2 = document.getElementById('list-2') ; 
+ console.log(ul2); // this ul2 point tpo the reference of the list it shows the latest list status  not the snapshot 
+ let newList2 = document.createElement('li') ;  // creating a node 
+ document.getElementById('list-2').appendChild(newList2) ; 
+
+ console.log(itemsList2); // static or snapshot 
+ console.log(ul2);  // dynamic ot live 
+
+ 
+
+
+    </script>
+    
+</body>
+</html>

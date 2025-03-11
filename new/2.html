@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagging in Contenteditable Div</title>
+    <style>
+        .contenteditable-div {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+            min-height: 50px;
+        }
+        .tagged-person {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenteditable-div" contenteditable="true">
+        Type your message here and tag someone like <span class="tagged-person">@JohnDoe</span>.
+    </div>
+    <p contenteditable="true">sldfjls</p>
+
+    <script>
+        // JavaScript to handle tagging logic can be added here
+        const names = [
+    "Alice", "Andrew", "Amelia",
+    "Benjamin", "Bella", "Brian",
+    "Charlotte", "Charles", "Chloe",
+    "Daniel", "Diana", "David",
+    "Emily", "Ethan", "Emma",
+    "Fiona", "Frank", "Faith",
+    "Grace", "George", "Gabriel",
+    "Hannah", "Henry", "Hazel",
+    "Isaac", "Isabella", "Ian",
+    "James", "Julia", "Jack",
+    "Kevin", "Katherine", "Kyle",
+    "Liam", "Laura", "Lucas",
+    "Michael", "Mia", "Matthew",
+    "Noah", "Natalie", "Nathan",
+    "Olivia", "Oscar", "Owen",
+    "Paul", "Penelope", "Peter",
+    "Quinn", "Quentin", "Queenie",
+    "Rachel", "Ryan", "Robert",
+    "Sophia", "Samuel", "Sarah",
+    "Thomas", "Taylor", "Tiffany",
+    "Ulysses", "Uma", "Ursula",
+    "Victoria", "Vincent", "Valerie",
+    "William", "Wendy", "Wyatt",
+    "Xavier", "Xena", "Xander",
+    "Yvonne", "Yusuf", "Yasmin",
+    "Zoe", "Zachary", "Zara"
+];
+
+const namesWithIdsAndImages = names.map((name, index) => ({
+    id: index + 1,
+    name: name,
+    img: `https://via.placeholder.com/150?text=${name.charAt(0).toUpperCase()}`
+}));
+
+console.log(namesWithIdsAndImages);
+    </script>
+</body>
+</html>

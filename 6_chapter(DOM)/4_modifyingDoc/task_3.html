@@ -1,0 +1,46 @@
+<!-- 
+->create li and append it to ul and ask the list content to the user  
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul class="list">
+
+    </ul>
+    <script>
+     
+  let ul = document.getElementsByClassName('list')[0];
+     function insertToList(ul){
+     
+        while(1){
+
+            let  li =  document.createElement('li') ; 
+            let content = prompt("enter the content inside li") ;  
+            console.log(content);
+            if(content==null){
+                return 0; 
+            }
+            else{
+                // li.innerText = content ; 
+                li.innerHTML = content ; 
+                // li.textContent = content ; 
+
+                ul.append(li);
+            }
+        }
+     }
+      insertToList(ul);
+
+    </script>
+    
+</body>
+</html>

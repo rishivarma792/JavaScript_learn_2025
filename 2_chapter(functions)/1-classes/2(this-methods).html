@@ -1,0 +1,99 @@
+<!-- this keyword 
+ 
+
+-> methods in js
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+          // c-1 : this keyword : 
+
+          console.log(this) ;  // refer to global scpe object for browser its window 
+
+          const obj1 = {
+             name : 'rishi' , 
+             greet : function (num){
+                 console.log(this.name + " " + num+  " hi"); /// inside an object this refers to object itself 
+             }
+        }
+        obj1.greet(2) ; 
+        
+        //creating constructors function
+        function constucFuntion1(name){
+            this.name = name ; 
+        }
+        const john1 = new constucFuntion1('John') ;
+        console.log(john1.name);
+        
+        
+        // inside function
+        function func2(){
+            console.log(".." + this) ; 
+        }       
+        func2();
+
+        // using this in arrow function
+
+        const obj2 = {
+            name : "Rishi" , 
+            greet : function (){
+            const innerfunction1 = () =>{ // this cant be used inside arrow but still this can be inherited from the parent  
+                console.log(this.name) ; 
+            } 
+            innerfunction1() ; 
+            }
+        }
+
+        obj2.greet(); 
+
+        // CALL BIND APPLY METHOD : 
+        function greet1(greeting){
+             console.log(greeting + " " + this.name) ; 
+        }
+        
+        const person1 = {
+            name : "RIshi"
+        }
+        greet1.call(person1,"hello") ; //call method
+  
+        // APPLY:  is similar to call but take arguments as array : 
+        function greet2(x){
+            console.log( arguments[0] + this.name + " " + arguments[1]) ; 
+        } 
+         const abcd = greet2.apply(person1,["hello","!"]) ;  //hello RIshi !
+        //   abcd() ; 
+        // // BIND : if we want to crate a new function that is associated with one object always 
+        // function greet3(greeting){
+        // console.log(greeting + " " + this.name) ; 
+        // }
+        // const newBindFunc = greet3.bind(person1,"hello") ;  // passing array dont work in bind 
+        // newBindFunc(); 
+  
+        // console.log("use cases : ");
+
+        // // USE CASES OF ABOVE METHODS :
+
+//         function multiply(a, b) {
+//             console.log(a + " " + b) ; 
+//     return a * b;
+//     }
+
+// const double = multiply.bind(2 ,null);
+// console.log(double(5));
+
+
+
+    </script>
+    
+</body>
+</html>

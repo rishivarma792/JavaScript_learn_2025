@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+  <ul>
+    <li>Animals
+      <ul>
+        <li>Mammals
+          <ul>
+            <li>Cows</li>
+            <li>Donkeys</li>
+            <li>Dogs</li>
+            <li>Tigers</li>
+          </ul>
+        </li>
+        <li>Other
+          <ul>
+            <li>Snakes</li>
+            <li>Birds</li>
+            <li>Lizards</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Fishes
+      <ul>
+        <li>Aquarium
+          <ul>
+            <li>Guppy</li>
+            <li>Angelfish</li>
+          </ul>
+        </li>
+        <li>Sea
+          <ul>
+            <li>Sea trout</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    // ... your code...
+    // GETTING all the list emenet tags in a html collection using querySelectorAll
+    let wholeLists = document.querySelectorAll('li'); 
+
+    for(let li of wholeLists){
+        // for each list the first node is the text node we are getting that from childNodes
+        // let animalName = li.childNodes[0].textContent ; 
+        // let animalName = li.firstChild.data;  we can also use firstChilid that return first child node 
+        console.log(animalName);
+        // then we are counting using selector returned collection length how many li are there in that particular each li
+        let noOfNested = li.querySelectorAll('ul > li').length ; 
+     alert(`Name is : ${animalName} : ${noOfNested}`);
+    }
+     
+   
+  </script>
+
+</body>
+</html>

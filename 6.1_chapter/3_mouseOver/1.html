@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        cursor: pointer;
+    }
+    .child{
+        height: 50px;
+        width: 50px;
+        background-color: blue;
+        margin: 10px;
+        cursor: pointer;
+
+    }
+</style>
+<body>
+     
+    <div class="case-1">
+        <div class="parent">
+            <div class="child">
+                hi this is tishi 
+            </div>
+        </div>
+    </div>
+    <script>
+        // case 1 : bubbling happens in mouse over and out 
+        let parent1 = document.getElementsByClassName("parent")[0] ; 
+        let child1 = document.getElementsByClassName("child")[0] ; 
+        parent1.addEventListener("mouseover",function(e){
+            console.log("parent : mouseover");
+        }) 
+        parent1.addEventListener("mouseout",function(e){
+            console.log("parent : mouseout");
+        })
+        child1.addEventListener("mouseover",function(e){
+            console.log("child : mouseover");
+        }) 
+        child1.addEventListener("mouseout",function(e){
+            console.log("child : mouseout");
+        })
+
+    </script>
+
+</body>
+</html>

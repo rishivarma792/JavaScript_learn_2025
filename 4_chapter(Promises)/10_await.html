@@ -1,0 +1,77 @@
+<!-- 
+->AWAIT :  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+    // CASE 1 :
+//     async function func1() {
+       
+//         const prom1 = new Promise(function generatorFunction (resolve,reject){
+//              setTimeout(() => {
+//                 console.log("setTimeout callback");
+//                 resolve("done");
+//              }, 3000);
+//         })
+        
+//         let result  = await prom1 ; 
+//         console.log("hi this is after await");
+
+//     }
+//   func1();
+
+//   CASE 2 : WE CAN CATCH ERROR SIMILAR TO THROW 
+// async function f() {
+
+// try {
+//   let response = await fetch('/no-user-here');
+//   let user = await response.json();
+// } catch(err) {
+//   // catches errors both in fetch and response.json
+//   console.log(err);
+//   alert(err);
+// }
+// }
+
+// f();
+
+// CASE 3 : CALLING ASYNC FROM NON ASYNC : as async return a promise in non async func treat it as promise and use then 
+
+    // async function asyncFunc1() {
+       
+    //     const prom1 = new Promise(function generatorFunction (resolve,reject){
+    //          setTimeout(() => {
+    //             console.log("setTimeout callback");
+    //             resolve("done");
+    //          }, 3000);
+    //     })
+        
+    //     let result  = await prom1 ; 
+    //     console.log("hi this is after await");
+    //     return result ; 
+
+    // }
+
+    // function nonAsyncFunc(){
+    //     console.log("inside non async function") ; 
+    //    let a =  asyncFunc1() ; // this will return a promise treat it as promise and apply then 
+    //    a.then((val)=>{      
+    //     console.log("printing the resolve value inside the non async function " + val)
+    //    })
+    //    console.log(a); 
+    // }
+    // nonAsyncFunc();
+    
+    </script>
+    
+</body>
+</html>

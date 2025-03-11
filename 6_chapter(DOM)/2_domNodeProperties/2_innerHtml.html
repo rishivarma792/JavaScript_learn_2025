@@ -1,0 +1,58 @@
+<!-- 
+->innerhtml : we can write and completely overides 
+->outer html : same as inner but 
+-?here what ever changed is not stored int the varaible that stored the prev html  
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <h1>this is h1 tag inside the case -1 </h1>
+    </div>
+
+    <script>
+
+        // // case 1 : innerhtml basics 
+        // console.log(document.body.innerHTML);
+
+        // // CASE 2 : WE CAN ALSO WRITE innerHtml : and script tag dont execute if dont close it closes automatically 
+        // let  body2 = document.body ; 
+        // body2.innerHTML = `
+        // <ul>
+        //     <li>hi</li>
+        // ` ;   
+
+        // CASE 3 : OUTER HTML AND INNERHTML 
+        // let div3 = document.querySelector('.case-1') ; 
+        // console.log(div3.innerHTML);
+
+        // div3.innerHTML = `
+        // <h1>hi using inner
+        // `;
+        // console.log(div3.innerHTML); // changed 
+
+        // but 
+        let div3 = document.querySelector('.case-1') ; 
+        console.log(div3.outerHTML);
+
+        div3.outerHTML = `
+        <h1>hi using outer
+        `;
+        console.log(div3.outerHTML); // noit changed 
+
+
+        
+    
+
+    </script>
+    
+</body>
+</html>

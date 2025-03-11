@@ -1,0 +1,73 @@
+<!-- 
+->ARRAY METHODS : 
+->every() : (function(must have el,index,array),thisvalue(optional)) 
+->fill() : (value,start,end(not included)) def:complete array to fill the original array  
+->find() :(function(el,index,arr),thisValue) finds the first element found
+->findLast() : 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // every :
+        let arr1 = [31, 4, 45, 37]
+
+        console.log("result of every : " + arr1.every(checkAge, 2));  //2 is this value 
+
+        function checkAge(el, index, arr) {  // the arr is the current array only 
+            console.log(arr);
+            if (el > 30) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        };
+        // fill
+        let arr2 = [1,2,3,4] ; 
+        console.log("filling complete array : " + arr2.fill(0)) ; 
+        console.log("filling part of array with single value array : " + arr2.fill(1,2,4)) ; 
+
+        // find : 
+        let arr3 = [18 ,17,16,18,15] ; 
+        console.log(arr3.find(checknum1,2)) ; 
+        function checknum1(el,index,arr){
+            console.log("this value in find method " + this );
+            if(el>17){
+                return el ; 
+            }
+                 }
+    //    findLast
+    let arr4 = [1,2,3,4,3,2,1] ; 
+    console.log("to find last element" + arr4.findLast(findNum1)) ; 
+    function findNum1(el,index,arr){
+     console.log(index) ; 
+        if(el==3){
+            return 3 ; 
+        }
+    }
+    // findIndex and findLastIndex
+    console.log("Index of 3 from start: " + arr4.findIndex(findNum2)) ;
+    console.log("Index of 3 from end: " + arr4.findLastIndex(findNum2)) ; 
+    function findNum2(el,index,arr){
+     console.log(index) ; 
+        if(el==3){
+            return index ; 
+        }
+    }
+
+
+    </script>
+
+</body>
+
+</html>

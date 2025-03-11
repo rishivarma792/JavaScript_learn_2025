@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        text node
+    </div>
+
+    <script>
+        console.log(document.body) ; 
+
+        // nodeType : for nodes ,nodeName,tagName
+    console.log(document.body.nodeType); //1 showing elelment node 
+    console.log(document.body.nodeValue);
+    console.log(document.body.tagName) ; 
+    console.log(document.body.nodeName) ; 
+
+    // case -1 : use data to get the text node content 
+    let textNode1 = document.getElementsByClassName('case-1')[0].firstChild ; 
+    console.log(typeof textNode1.data);
+
+    </script>
+    
+</body>
+</html>

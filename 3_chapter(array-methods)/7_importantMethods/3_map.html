@@ -1,0 +1,35 @@
+<!-- MAP : 
+-> 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         // MAP
+        //   remove duplicates 
+        let arr1 = [1,2,3,3,2,4] ; 
+        let nArr1 = arr1.filter((x,index,arr)=>{
+        if(arr.indexOf(x)==index){
+            return -1 ;  // a truty value    
+        }
+        },"thisvalue");
+        console.log(nArr1);
+
+        // EXAMPLE: 
+        const dates = ['2023-01-01', '2023-02-01', '2023-03-01'];
+        const formattedDates = dates.map(date => new Date(date).toLocaleDateString());
+        console.log(formattedDates);
+
+
+
+    </script>
+</body>
+</html>

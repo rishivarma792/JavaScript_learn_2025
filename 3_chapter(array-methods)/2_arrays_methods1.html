@@ -1,0 +1,62 @@
+<!-- 
+->Array methods : 
+->at
+->arr1.concat(arr2) : combines 2 arrays 
+->constuctor: returns the constructor the array created 
+->copyWithin : (indexfrom which the replacing must start(requiured),start(0) ,end(length))
+->entries() : retrun a iterable key value pairs of given array or object and using of we can iterate
+
+-->
+s
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+     
+    //  at : 
+    let arr1 = [1,2,3,"last"] ; 
+    let obj1 = {
+        name : "rishi"
+    } ; 
+    console.log("hi" + " " + arr1.at(-1));
+//  console.log("at in obj : " + obj1.at("name") ); not valid 
+    
+// CONCAT ; 
+    let arr2 = ["rishi" , "varma"] ; 
+    let arr3 = ["alluri"];
+    let result1 = arr3.concat(arr2) ; 
+    console.log(result1);
+
+    //CONSTUCTOR :  
+    let arr4 = new Array(1,2,3);
+    console.log("constructor : " + arr2.constructor);
+    console.log("constructor : " + arr4.constructor);
+
+    // copyWithin : 
+    let arr5 = [1,2,3,4] ; 
+    console.log(arr5.copyWithin(1)) ; 
+
+    // entries : 
+    let arr6 = ["Alluri","Rishi","Varma"] ; 
+  let obj6 = {
+    name : "Rishi" , 
+    age : 21
+  } ; 
+  console.log(arr6.entries()) ; 
+  for(let a of arr6.entries()){
+    console.log(a[1]);
+  }
+//   console.log("obje entire " + obj6.entries() );
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- 
+->for propertie s 
+->document.form
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <div class="case-1">
+        <form action="" name="form1">
+            <label for="username" name="lebel1">name</label>
+            <input type="text" name="username">
+        <input type="radio" name="radio1">
+        <input type="radio" name="radio1">
+        <input type="radio" name="radio1">
+   
+        </form>
+    </div>
+
+    <script>
+       
+    //    let form1 = document.forms[0] ; 
+    //    or 
+    let form1 = document.forms.form1 ; 
+
+    console.log(form1);
+
+    // we can also get lements 
+
+    console.log(form1.elements.username);
+    // accessing radio buttons : 
+    console.log(form1.elements.radio1[1]); // we can access 
+
+    // BACKREFERECNE 
+    let input2 = document.forms.form1.username;
+    console.log(input2);
+    // again we can get the form 
+    console.log(input2.form); // shows backrefernce 
+
+    </script>
+
+</body>
+</html>

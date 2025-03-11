@@ -1,0 +1,64 @@
+<!-- 
+->MATCHES : <anyElement>.maches(<selector>)  
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <!-- <div class="case-1">
+    
+        <ul>
+            <li>one</li>
+            <li>two</li>
+        </ul>
+        <a href="http://google.com">google</a>
+        <a href="http://fb.com">fb</a>
+
+    
+    </div> -->
+
+    <div class="case-2">
+        <ul>
+            <li class="highlight">one</li>
+    <li>two</li>
+    <li class="highlight">three</li>
+        </ul>
+    </div>
+
+
+    <script>
+
+        // CASE 1 : USING MACHES 
+        // let ulList1 = document.querySelector('.case-1').children[0] ; 
+        // console.log(ulList1);
+        // console.log(ulList1.matches('.case-1 ul'));
+        
+        // CASE 2 : REAL USE CASE 
+        
+        let ulList2 = document.querySelector('.case-2').children[0] ;
+        console.log(ulList2.children);
+        for(let element of ulList2.querySelectorAll('li')){
+            console.log(element);
+            if( element.matches('.highlight') ){
+            element.style.background = 'red';
+        }  
+
+        }
+        // ulList2.querySelectorAll('li').forEach(element => {
+        // if( element.matches('.highlight') ){
+        //     element.style.background = 'red';
+        // }           
+        // }); 
+  
+
+    </script>
+    
+</body>
+</html>

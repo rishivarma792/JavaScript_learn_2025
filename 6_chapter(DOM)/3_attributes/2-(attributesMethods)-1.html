@@ -1,0 +1,74 @@
+<!-- 
+  ->hasAttrirbutes()
+
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <form action="submit">
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username">
+            <label for="age">age</label>
+            <input type="number" name="age" id="age">
+
+        </form>
+
+    </div>
+    <div class="case-2">
+        <input type="text" id="case2Input">
+    </div>
+
+    <script>
+//  CASE 1 : 
+// hasAttr
+// let form1 = document.getElementsByTagName('form')[0] ; 
+// let inputs = document.getElementsByTagName('input') ; 
+// console.log(form1.hasAttribute("action")); //true 
+// console.log(form1.hasAttribute(" ")); // false
+// // getAttr
+
+// console.log( inputs[0].getAttribute("id")); //username
+// console.log( inputs[0].getAttribute("id1")); //null for not present attr 
+
+// // attributes
+// let attributes1 = inputs[0].attributes; 
+// for(let a of attributes1){
+//     // console.log(a.name + " " +  a.value);
+// // or
+//     console.log(a.nodeName + " " +  a.textContent);
+// }
+
+
+// CASE 2 : setAttributes
+// let input2 = document.querySelector(".case-2 input"); 
+let input2 = document.getElementById("case2Input"); 
+
+console.log(input2);
+console.log(input2.hasAttribute('placeholder') ); 
+
+input2.setAttribute("placeholder","enter input");
+
+console.log(input2.hasAttribute('placeholder') ); //here as input2 is a live refrence it is getting updated  
+
+
+// removeAttribute 
+input2.removeAttribute("placeholder") ; 
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

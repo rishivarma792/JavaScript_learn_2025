@@ -1,0 +1,52 @@
+<!-- 
+-> about evetn.target
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        
+        <div class="div-1" onclick="alert('div')">
+            <p class="p-1" onclick="alert('p')">
+                <span class="span-1" onclick="alert('sapn')">
+                    span
+                </span>
+            </p>
+        </div>
+
+    </div>
+    
+    <script>
+
+        // case 1 : how bubling works and event target 
+        let div1 = document.querySelector(".div-1") ; 
+        let p1 = document.querySelector(".p-1") ;   
+        let span1 = document.querySelector(".span-1") ;
+        div1.addEventListener("click",(event)=>{
+            console.log(event.currentTarget) ; 
+            console.log( event.target) ;  // shows on what actually we clicked 
+        })   
+        p1.addEventListener("click",(event)=>{
+            console.log( event.currentTarget) ; 
+            console.log( event.target) ; 
+        })   
+        span1.addEventListener("click",(event)=>{
+            console.log( event.currentTarget) ; 
+            console.log( event.target) ; 
+        })   
+
+
+
+
+    </script>
+</body>
+</html>

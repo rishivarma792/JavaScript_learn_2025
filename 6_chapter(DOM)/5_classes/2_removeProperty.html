@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aqua;">
+
+    <script>
+       
+       document.body.style.display="none" ; 
+    //    to remove this afterwords we can use 
+    // setTimeout(() => {
+        
+    //     document.body.style.display="" ;  //doing this set the the syle diplay it be vanished and no such style pro is given
+    // }, 2000);
+    // 
+    // or
+    // WE CAN USE REMOVEPROPERTY 
+     setTimeout(() => {
+      document.body.style.removeProperty("display") ;       
+    }, 2000);
+
+    </script>
+    
+</body>
+</html>

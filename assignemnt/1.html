@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./1.css">
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        * {
+            padding:0px ;
+            margin: 0px;
+            
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            width: 800px;
+            /* margin-top: 200px; */
+            gap: 25px;
+            padding: 50px;
+           padding-top: 100px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: aliceblue;
+        }
+        .comment-box{
+            height: auto;
+            width: 80%;
+            min-height: 300px;
+            z-index: 0;
+        }
+        
+            .input-field {
+                
+                padding: 5px;
+                width: 80%;
+                margin-inline: 25px;
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                 gap: 5px;
+                 box-sizing: border-box;
+                 box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                 background-color: white;
+            }
+            #user-input{
+               padding: 10px;
+               width: 100%;
+               border: none;
+               box-sizing: border-box;
+
+            }
+            #user-input:focus{
+                outline: none;
+            }
+            .buttons {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                width: 100%;
+                gap: 5px;
+            }
+        
+        .btn {
+            padding: 8px;
+            font-size: 0.8rem;
+            border: none;
+            font-weight: 500;
+            letter-spacing: 0.075rem;
+            box-sizing: border-box;
+    
+        }
+        
+        .btn-comment {
+            background-color: #fde84b;
+            color: black;
+         
+
+        }
+        .btn-comment:hover{
+            background-color: #edd735;
+            border: 1px solid black;
+        }
+    
+        .btn-archive {
+         background-color: white ;
+         color: black;
+         border: 1px solid blue;
+         color: blue;
+        }
+    
+        .names-list{
+            position: absolute;
+            bottom: 105%;
+            height:200px ; 
+            width: 600px ;
+            
+            overflow: scroll;
+            overflow-x: hidden;
+            overflow-y: auto;  
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            z-index: 2;
+            background-color: white;
+            
+        }
+        li{
+            list-style: none;
+            padding: 8px;
+            font-size: 16px;   
+        }
+       .profile{
+            display: flex;
+            gap: 5px;
+            text-transform: capitalize;
+            align-items: center;
+            
+        }
+        .profile-image{
+            border-radius: 25px;
+            height: 25px;
+            width: 25px;
+            
+        }
+        
+        .profile-added{
+            text-transform: capitalize;
+            color: blue;
+        }
+
+        .comment{
+         margin-inline: 10px; 
+         margin-block: 5px;
+         display: flex;
+         align-items: center;
+        }
+        .comment-image{
+        border-radius: 25px;
+        height: 25px;
+        width: 25px;
+
+        }
+        .comment-name{
+
+        }
+        .user-details{
+            display: flex;
+            flex-direction: column;
+            font-size: 0.8rem;
+            align-items: start;
+            margin-left: 5px;
+        }
+        .message{
+           
+            font-size: 1.2rem;
+        }
+        .profile:hover{
+            background-color: #c1c1c1;
+           font-weight: 550;
+            transition: 0.9ms;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <main>
+        <div class="comment-box">
+           <div class="comment"> 
+               <img src="./img1.jpg" alt="" height="25px" width="25px" class="comment-image">
+            <div class="user-details">
+                <p class="comment-name">Rishi Alluri<p>
+                    <p class="message">
+                        hi everyOne this is rishi 
+                    </p>
+            </div>
+        </div> 
+      
+        </div>
+        <div class="input-field">
+                <ul class="names-list">
+                    <li class="profile">rishi</li>
+                    <li class="profile"> <img src="./img1.jpg" alt="rishi"  class="profile-image"/>rishi</li>
+                    <li>rishi</li>
+                    <li>rishi</li>
+                    <li>rishi</li>
+                </ul>
+             <div id="user-input" contenteditable="true">
+                <!-- hi  -->
+   <!-- <span class="profile-added">Rishi</span> -->
+   <!-- how are you -->
+             </div>
+            <div class="buttons">
+                <button class="btn btn-archive">
+                    Comment and archive
+                </button>
+                <button class="btn btn-comment">
+                    Comment
+                </button>
+            </div>
+        </div>
+      
+
+        </div>
+    </main>
+
+
+
+    <script src="./1.js"></script>
+</body>
+
+</html>

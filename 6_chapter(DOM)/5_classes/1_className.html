@@ -1,0 +1,46 @@
+<!-- 
+->className and classList :  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .overidingClass{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="case-1">
+        <h2 class="heading h2Tag">this is heading in case -1 </h2>
+    </div>
+
+    <script>
+//   CASE 1 : 
+// CLASSNAME : 
+  console.log(document.querySelector(".case-1").className) ; // returns a string 
+// for 2 classes 
+console.log(document.getElementsByTagName('h2')[0].className) ; // returns a string with multiple classes
+document.getElementsByTagName('h2')[0].className += " overidingClass";
+// console.log(document.getElementsByTagName('h2')[0].className += " overidingClass"); // returns the all class names 
+console.log(document.getElementsByTagName('h2')[0].className) ; // completely overides the class
+
+// CLASS LIST  : 
+document.querySelector(".case-1").classList.add("subcase1")  ;  
+// console.log(document.querySelector(".case-1").classList.add("subcase1") );  //return undefined
+
+document.querySelector(".case-1").classList.remove("subcase1")  ;  
+// console.log(document.querySelector(".case-1").classList.remove("subcase1") ); //returns  undefined
+
+console.log(document.querySelector(".heading").classList.contains("heading") ); // returns true    
+document.querySelector(".heading").classList.toggle("overidingClass");
+// console.log(document.querySelector(".heading").classList.toggle("overidingClass")); // ret true if added and false if removed 
+   </script>
+    
+</body>
+</html>

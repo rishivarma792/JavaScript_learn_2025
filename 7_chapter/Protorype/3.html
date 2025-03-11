@@ -1,0 +1,51 @@
+<!-- 
+-> MULTIPEL WAYS TO REFERECNE A OBEJCT :  
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//    c-1 : using Object.create(<prototypeObj>)
+      
+    let prototypeObj = {
+       greet : function (){
+        console.log("hi this is greet function") ; 
+       }
+    } 
+
+    let obj1 = Object.create(prototypeObj) ; 
+    // we can add methods 
+    obj1.name = "Rishi" ;  //so obj1 prototypically inherits from the parent object 
+    console.log(obj1.name);
+    obj1.greet();
+
+    // C-2 : Object.setPrototypeOf(<obj> , <prtotype Obj>)
+        let animal = {
+            eats : true ,
+            canTalk : false
+        }
+        let lion = {
+            roar : true 
+        }
+        Object.setPrototypeOf(lion, animal);
+        console.log(lion.eats);
+        
+        console.log(typeof Object.getPrototypeOf(lion));   // returns the prototype object  
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

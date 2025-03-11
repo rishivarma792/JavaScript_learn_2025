@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//      CASE 1 : NESTED PROMISE
+
+const promise1 = new Promise((resolve,reject)=>{
+
+    let a = 0 ; 
+    a = a+ 1; 
+    resolve(a) ; 
+
+}).then((val)=>{
+   
+    new Promise((resolve,reject)=>{
+    let b = 0 ; 
+    b = val + 1;
+    resolve(b);    
+    }).then((val2)=>{
+    console.log(val2);
+    })
+
+
+});
+
+// better way 
+new Promise((resolve,reject)=>{
+    let a =0; 
+    a =a+1; 
+    resolve(a); 
+}).then((val)=>{
+    return val+1 ; 
+}).then((val)=>{
+ let b  = 1; 
+ b = val+1 ; 
+ console.log(b); 
+})
+         
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- 
+->THE JS METHODS : 
+->STATIC METHODS :  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // CASE 1 : STATTIC METHOD 1 utility method 
+    class MathUtil{
+
+        static add(a,b){
+            return a+b ; 
+        }
+        static sub(a,b){
+            return a-b ; 
+        }
+    } 
+    let a = MathUtil.add(2,3) ; 
+    console.log(a); 
+
+    // CASE 2 : FACORY METHODS : 
+    class class2{
+        constructor (name,age){
+            this.name = name ; 
+            this.age = age ; 
+        }
+        static createUser(name,age){ // FACTORY FUNCTION RETURN THE INSTATNCE 
+       return new class2(name,age) ; 
+        }
+    }
+    let obj1 = class2.createUser("rishi",21); 
+    console.log(obj1.name);
+   
+
+
+
+    </script>
+</body>
+</html>

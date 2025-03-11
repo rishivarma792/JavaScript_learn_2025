@@ -1,0 +1,41 @@
+<!-- 
+-> limitations in multilevel inheritance : 
+->cant be circular throsws error  
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+// C -1 : CIRCULAR REFERENCE ERROR : 
+
+let office = {
+    company : "paltech" , 
+    office : "n-heights",
+    // __proto__ : office   ERROR COMES AS CANT ACCESS OFFICE 
+}
+let g1 = {
+    level : "g0",
+    workhours : "8",
+    laptop : "Dell" ,
+    __proto__ : office 
+
+}
+let g0 = {
+    level : "g1",
+    workhours : "8.45",
+    __proto__ : g1 ,
+    // __proto__ : office  Duplicate __proto__ fields are not allowed in object literals
+}
+
+    </script>
+
+</body>
+</html>

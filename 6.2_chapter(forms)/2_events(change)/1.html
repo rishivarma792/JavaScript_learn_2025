@@ -1,0 +1,44 @@
+<!-- 
+->event : onChange 
+->difference of onchange and onblur 
+->CASE 2 : oninput   
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <h2>diff onchange or onblur </h2>
+    <div class="case-1">
+<!--    triggers when the value is changed && the focus is removed  -->
+        <input type="text" id="onchange" onchange="alert('onchange')"> 
+<!-- triggers whenever focus is removed  -->
+        <input type="text" id="onblur" onblur="alert('onblur')">
+    </div>
+       <hr>
+
+       <div class="case-2">
+       <input type="text" id="oninput" placeholder="on input">
+         
+       </div>
+
+      <script>
+
+        // CASE 2 : oninput
+        let input2  =  document.getElementById("oninput") ; 
+        input2.addEventListener("input" , function (e){
+             console.log(e) ; 
+        })
+      </script>
+      
+       
+</body>
+</html>

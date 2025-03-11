@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu">
+        <button data-action="save">Save</button>
+        <button data-action="load">Load</button>
+        <button data-action="search">Search</button>
+      </div>
+    <script>
+      
+      let obj1 = {
+
+        save : function(){
+alert("saving") ; 
+        },
+        load : function(){
+            alert("loading") ; 
+
+        },
+        save : function(){
+            alert("saving") ; 
+
+        }
+
+      }
+       let menu1 =document.getElementById('menu'); 
+       menu1.addEventListener("click", function(e){
+          let action = e.target.dataset.action ; 
+          console.log(action);
+          obj1[action](); // to call function using variables 
+       });
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!-- 
+-> new properties and methods  can be added to hte dom objects  
+->
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <h2>we can add methods and properties for dom nodes</h2>
+    </div>
+    <div class="case-2">
+          <input type="text" something="this is non statndard">
+    </div>
+    
+    <script>
+    
+    // CASE 1 : WE CAN ADD NEW PROPETEIS AND METHODS FOR DOM OBJECTS 
+    let div1  = document.getElementsByClassName('case-1')[0] ;
+    div1.myData = {
+        name : "Rishi" , 
+        age : 22
+    }  
+    console.log(div1.myData.age ) ; 
+    div1.sayTagName = function (){
+        console.log(this.tagName);
+    }
+    div1.sayTagName(); 
+    // as prototypes we can add
+    Element.prototype.sayTagName = function (){
+        console.log(this.tagName);
+
+    }
+    document.getElementsByTagName('h2')[0].sayTagName();
+
+    console.log("\n")
+    // CASE 2 : STANDARD VS NON STAND
+    
+    let inputTag = document.getElementsByClassName('case-2')[0].firstElementChild ; 
+    console.log(inputTag);
+    console.log(inputTag.type); // text ->standard 
+    console.log(inputTag.something); // undefined 
+
+
+
+
+    </script>
+</body>
+</html>

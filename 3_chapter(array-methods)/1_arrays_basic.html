@@ -1,0 +1,42 @@
+<!-- 
+->ARRAYS BASICS : 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // C-1 : DECLARAING ARRAY LENGTH PROPERTY 
+    
+    var arr1 = [1,2,3] ; 
+    console.log("arr1 length :" + " " +arr1.length); //3
+    console.log("array type :" + " " + typeof arr1) ;
+
+    // CREATING ARRAY WITH SOME LENGTH
+    let arr2 = Array(10) ; 
+    console.log(arr2.length); // 10
+    
+    // empties doesnt effect the length 
+    let arr3 = [1,2 , , 4] ; 
+    console.log(arr3.length);
+
+    // C-2 : WRITING IN LENgth 
+
+    let arr4 = [1,2,3] ; 
+    arr4.length = 2 ; //it deletes completely the other leftover elements 
+    console.log("shortening the array : " + " " + arr4) ; 
+    arr4.length = 5 ; 
+    console.log("increasing the array size : " + " " + arr4) ; // 1,2,,,
+
+    
+    </script>
+    
+</body>
+</html>

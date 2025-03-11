@@ -1,0 +1,64 @@
+<!-- 
+accessing values in input and others  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="case-1">
+        <form action="submit" name="form1">
+            <label for="name">name</label>
+            <input type="text" name="username" id="username" value="this is input value ">
+
+            <textarea name="textarea1" id="textarea1" ></textarea>
+            <input type="checkbox" name="checkbox1">
+
+        </form>
+
+    </div>
+    <hr>
+    <h2>case :2</h2>
+    <div class="case-2">
+        <form action="/" name="form2">
+            <select name="selectfruit"  id="select-fruit">
+                <option value="banana">Banana</option>
+                <option value="apple">Apple</option>
+                <option value="orange">Orange</option>
+
+            </select>
+        </form>
+    </div>
+
+
+    <script>
+
+        let form1 = document.forms.form1 ; 
+        let input1  = form1.username ; 
+        let textarea1 = form1.textarea1 ; 
+        let checkbox1 = form1.checkbox1 ; 
+
+        input1.value = "value assigned form js " ; 
+        textarea1.value = "value assigned form js " ; // working 
+        console.log(input1.id);
+        checkbox1.checked = true ; 
+
+        // CASE -2 : 
+        let form2 =document.forms.form2 ; 
+        let select2 = form2.elements.selectfruit ;  // we can acces them 
+        console.log(select2);
+
+        // all three do the same 
+        // select2.options[2].selected = true ; 
+        // select2.selectedIndex = 2 ; 
+        // select2.value = "orange";
+
+        
+
+    </script>
+</body>
+</html>

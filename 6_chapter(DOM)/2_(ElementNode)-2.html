@@ -1,0 +1,39 @@
+<!-- 
+->TO target elments and dont include text and comment node 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>THis is first child</h1>
+    <p>this is second child</p>
+    <div>
+        <h3>in div</h3>
+        <h4>in div-2</h4>
+    </div>
+    <h4>this is 4th child</h4>
+    
+
+    <script>
+     
+    //  C-1 : .children, .
+     console.log(document.body.children); // also returns a dom collection 
+    console.log(document.body.firstElementChild);
+    console.log(document.body.lastElementChild);
+    console.log(document.body.firstElementChild.nextElementSibling);
+    console.log(document.body.lastElementChild.previousElementSibling);
+    console.log(document.body.parentElement);
+
+
+
+
+    </script>
+    
+</body>
+</html>

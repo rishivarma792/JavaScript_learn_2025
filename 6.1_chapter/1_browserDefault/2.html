@@ -1,0 +1,49 @@
+<!-- 
+->Also using event delegation 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body *{
+            padding: 0px;
+            margin: 0px;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="case-1 menu">
+     <ul>
+        <li><a href="/html">html</a></li>
+        <li><a href="/css">css</a></li>
+        <li><a href="/javascript">javascript</a></li>
+     </ul>
+    </div>
+
+    <script>
+
+        // CASE -1 : USING ONLCIK ON MENU WE CAN PREVENT DEFAULT EVENTS 
+        let menu1 = document.getElementsByClassName("menu")[0] ;
+        menu1.onclick = function(e){
+       console.log(e.target.nodeName);
+       if(e.target.nodeName!="A") return ; 
+
+
+       let href  = e.target.getAttribute("href") ; 
+       console.log(href);
+
+       return false ; 
+        }
+    </script>
+    
+</body>
+</html>

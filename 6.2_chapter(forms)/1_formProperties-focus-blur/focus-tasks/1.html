@@ -1,0 +1,55 @@
+<!-- 
+->create a editable div 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textarea1{
+            height: 200px;
+            width: 200px;
+        }
+        div{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="case-1">
+        <div class="editableDiv" style="border:1px solid red;" tabindex="1">
+
+        </div>
+
+    </div>
+    <script>
+
+        let div1 = document.getElementsByClassName("editableDiv")[0]; 
+        
+        div1.onfocus = function (e){
+            let text1 = document.createElement("textarea") ; 
+        text1.classList.add("textarea1") ; 
+        
+        text1.onblur = function (e){
+            let content = text1.value ; 
+            div1.innerText = content ; 
+            div1.tabIndex = "-1" ; 
+            text1.replaceWith(div1) ;
+            
+            div1.blur();
+        }
+        div1.parentElement.replaceChild(text1,div1);
+        text1.focus();
+    }
+    
+    // let textarea1 = document.getElementsByClassName("textarea1")[0];  // not possible as the replacement is not yet occured 
+    
+    // console.log(textarea1);
+    </script>
+</body>
+</html>

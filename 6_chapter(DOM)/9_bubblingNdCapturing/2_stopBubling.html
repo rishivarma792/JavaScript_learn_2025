@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <form >
+            form 
+            <p>
+                this is rishi
+            </p>
+        </form>
+    </div>
+
+    <script>
+
+        let form1 = document.querySelector(".case-1 form") ; 
+        let p1 = document.querySelector(".case-1 p") ;
+        p1.addEventListener("click", ()=>{
+            alert("this is p") ; 
+            // event.stopPropagation(); // will make sure to stop the bubling and continue other events  
+            event.stopImmediatePropagation(); // will stop bubling and also other events on this element 
+            alert("hi");
+        })
+        p1.addEventListener("click", ()=>{
+            alert("this is p event 2") ; 
+            event.stopPropagation(); // will make sure to stop 
+            
+        })
+        form1.addEventListener("click", ()=>{
+            alert("this is form") ;
+             
+        })  
+
+
+    </script>
+    
+</body>
+</html>

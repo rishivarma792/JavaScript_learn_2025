@@ -1,0 +1,30 @@
+<!-- 
+->to stop default events :  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <!-- using retun false  -->
+        <a href="/" class="anchor-tag" onclick="return false" >this is a1</a>
+
+        <a href="/" class="anchor-tag">this is a2</a>
+       
+    </div>
+    <script>
+        // using preventDefualt 
+        let a2 = document.querySelectorAll(".anchor-tag")[1] ; 
+        a2.addEventListener("click",function(e){
+            console.log(e);
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>

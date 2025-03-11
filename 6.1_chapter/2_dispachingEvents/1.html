@@ -1,0 +1,47 @@
+<!-- 
+-.create a new event :  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- event button (mouse butoon ) -->
+    
+    <div class="case-1">
+        <button id="button1">
+            mouse click 
+        </button>
+    </div>
+    <div class="case-2">
+        <button id="button2">
+            shft+click
+        </button>
+    </div>
+
+    <script>
+        let btn1 = document.getElementById("button1") ; 
+        btn1.addEventListener("click",function(e){
+            console.log(e.button); // 0 comes denoting left button of mouse 
+        })
+        btn1.addEventListener("contextmenu",function(e){
+            console.log(e.button); // 2 comes denoting right button of mouse 
+        })
+
+        //CASE-2 :  adding modifiers 
+        let btn2 = document.getElementById("button2") ; 
+        btn2.addEventListener("click",function(e){
+            console.log(e.shiftKey); // return true or false if pressed 
+            if(e.shiftKey){
+                alert("shift key pressed");
+            }
+        })
+    </script>
+    
+</body>
+</html>

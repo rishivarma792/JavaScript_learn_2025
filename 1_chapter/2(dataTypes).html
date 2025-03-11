@@ -1,0 +1,76 @@
+<!-- 
+->DATATYPES : 
+->PRIMITIVE : 
+NULL , UNDEFINED , BIGiNT , NUMBER ,STRING ,NAN ,SYMBOL , BOOLEAN 
+
+-->
+
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    //   primitive : 
+    let a = 1 ;  //number 
+    let b = "rishi" ;   //string
+    b = "ri" ; 
+    console.log(typeof (a + b));
+    let c ; 
+    console.log(typeof (c)); //undefined
+
+    let d = null ;            //null   
+    console.log(typeof (d)); //object **
+    
+    // boolean :  *************
+    let e = true ; 
+    console.log(typeof (e)); //boolean
+    //->true values : 
+    let e1 = 2 ;
+    let e3 = Infinity  ; 
+    let e2 = "non empty string" ;
+    let  e4 = {
+        a : "non empty object"
+    };
+    console.log("Boolean true values : ") ; 
+    console.log(Boolean(e3));  
+    //->false values : 
+    let e5 = "" ; 
+    let e6 = 0 ; 
+    let e7 = NaN ; 
+    let e8 = undefined ;  
+    let e9 = null ; 
+    console.log("Boolean false \n values : ") ; 
+    console.log(Boolean(e8));
+
+    let f = NaN ;   //its type is a number 
+    console.log(typeof f); //Number
+
+    // nan : 
+    let g = Math.sqrt(-1) ;
+    let h = 'a'*2 ; 
+    console.log('h : ' + h); //nan
+    console.log(g); //nan
+    console.log (typeof g); //number
+
+    // symbol : 
+    let i = Symbol("rishi1") ;
+    let i1 = Symbol("rishi1") ; 
+    console.log(i) ; 
+    console.log(typeof i) ;  // symbol 
+    let j = {
+        [i] : "symbol1" , 
+        [i1] : "symbol2"
+    }
+    console.log("object with symbols as keys ") ;
+    console.log(j[i1]); // access objects 
+
+        
+    </script>
+    
+</body>
+</html>

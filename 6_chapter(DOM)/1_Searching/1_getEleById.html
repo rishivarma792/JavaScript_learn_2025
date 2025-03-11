@@ -1,0 +1,56 @@
+<!-- 
+->getElementById :
+->  
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <!-- CASE 1 :  -->
+    <div class="case-1">
+        
+        <p id="firstId" class="para-class"> this is the first id
+            <span>hi</span>
+            <a href="sdsd">sdsdf</a>
+        </p>
+    </div>
+
+    <!-- CASE -2 : VARIABLES VS ID NAMES and only can be called from documnet -->
+     <DIV class="case-2">
+        <p id="secId">this is second id</p>
+     </DIV>
+
+    <script>
+        // case -1 : 
+      let exampleObj1 = {
+        name : "rishi",
+        age : 21
+      }
+      console.log(exampleObj1);
+
+      let firstId = document.getElementById('firstId') ; 
+      console.log(firstId); // returns a object IMPORTANT 
+
+      console.log('\n')
+    //   case 2  : 
+    let secId = 10 ;
+    console.log(secId); 
+    secId = document.getElementById('secId') ; 
+    console.log(secId); 
+    let case2Class = document.getElementsByClassName('case-2')[0];
+    console.log(case2Class);
+    // console.log(case2Class.getElementById('secId'));  will give error as we cant us egrtElById not other than element 
+
+
+
+    </script>
+    
+</body>
+</html>

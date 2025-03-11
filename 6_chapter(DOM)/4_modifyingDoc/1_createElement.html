@@ -1,0 +1,40 @@
+<!-- 
+->creating a elelemnt 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .case-1 {
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+    </style>
+</head>
+<body>
+    <div class="case-1">
+
+    </div>
+    
+    <script>
+
+        // CASE-1 CREATING A ELEMENT : 
+ let newELement1 = document.createElement("p") ; 
+ let newTextNode = document.createTextNode("hi this is text node") ; 
+
+ newELement1.append(newTextNode); 
+//  to add elements : 
+ let div1 = document.getElementsByClassName('case-1')[0] ;
+ div1.append(newELement1); 
+
+    </script>
+</body>
+</html>

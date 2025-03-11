@@ -1,0 +1,71 @@
+<!-- 
+->add event listner : 
+->here function with same code are not same they represent differernt objects so to 
+->remove we need to give same objects  
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="case1">
+    <h2>using add event listnres </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nostrum a rerum architecto nihil quam deleniti eaque voluptatem molestias? Praesentium est alias delectus culpa officia cupiditate vel recusandae autem voluptatibus minima repudiandae voluptates consequuntur iure, saepe at consectetur sequi natus quia iste sit? Consequatur, ab. Accusantium exercitationem expedita beatae similique aliquam, unde iste voluptates soluta nam doloribus ducimus ipsam laudantium? Rem quidem obcaecati praesentium fuga delectus, et non, libero soluta ad accusamus molestias itaque recusandae ducimus aliquam repellat illo temporibus blanditiis autem iure in. Ipsa, vero est beatae, voluptate voluptatum vitae earum iste architecto id necessitatibus velit aliquid quam officia?</p>
+   </div>
+
+   <div class="case2">
+    <h2>using add event listnres multiple times  </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nostrum a rerum architecto nihil quam deleniti eaque voluptatem molestias? Praesentium est alias delectus culpa officia cupiditate vel recusandae autem voluptatibus minima repudiandae voluptates consequuntur iure, saepe at consectetur sequi natus quia iste sit? Consequatur, ab. Accusantium exercitationem expedita beatae similique aliquam, unde iste voluptates soluta nam doloribus ducimus ipsam laudantium? Rem quidem obcaecati praesentium fuga delectus, et non, libero soluta ad accusamus molestias itaque recusandae ducimus aliquam repellat illo temporibus blanditiis autem iure in. Ipsa, vero est beatae, voluptate voluptatum vitae earum iste architecto id necessitatibus velit aliquid quam officia?</p>
+   </div>
+    
+    <script>
+        // CASE 1 : 
+        let div1 = document.querySelector('.case1') ; 
+        
+        function saythanks(){
+            alert("thanks") ; 
+        }
+        div1.addEventListener("click",saythanks) ; 
+        div1.removeEventListener("click" , saythanks); // must reference to same function 
+         
+        // CASE 2 : MULTIPLE EVENT LISTNERS will be added 
+        let div2 = document.querySelector('.case2') ; 
+        
+        function saythanks(){
+            alert("thanks") ; 
+        }
+        
+        function saythanks2(){
+            alert("thanks 22") ; 
+        }
+        div2.addEventListener("click",saythanks) ; 
+        div2.addEventListener("click" , saythanks2); // must reference to same function 
+
+        // CASE 3 : PASSING OBJECT TO HANLDE EVENT 
+
+       let obj1 = {
+        
+        handleEvent : function (event){
+switch(event.type){
+     case "mouseover" : 
+     event.currentTarget.style.background = "blue" ; 
+     break ; 
+     case "mouseout" :
+     event.currentTarget.style.background = "" ; 
+       break ; 
+}
+        }
+       }
+
+        div1.addEventListener("mouseover", obj1) ; 
+        div1.addEventListener("mouseout", obj1) ; 
+
+        
+    </script>
+</body>
+</html>

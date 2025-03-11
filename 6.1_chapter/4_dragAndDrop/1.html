@@ -1,0 +1,79 @@
+<!-- 
+->simple drag  and drop using mousemove mouseup and mousedown
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .case-1{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="case-1">
+        <img src="https://en.js.cx/clipart/ball.svg" class="draggable">
+    </div>
+    
+    
+    <script>
+        let ball =document.querySelector(".draggable") ; 
+//         ball.addEventListener("mousedown",function(e){
+
+//             this.style.position = "absolute";
+
+//         })
+//         function moveAt(x,y){
+//             ball.style.left = x + "px" ; 
+//             ball.style.top = y + "px";
+
+//         }
+
+        
+
+//         ball.addEventListener("mousemove",function(e){
+// console.log(e.pageX) ; 
+// moveAt(e.pageX,e.pageY);
+//         }) ; 
+ball.onmousedown = function(event) {
+  // (1) prepare to moving: make absolute and on top by z-index
+  ball.style.position = 'absolute';
+  ball.style.zIndex = 1000;
+
+  // move it out of any current parents directly into body
+  // to make it positioned relative to the body
+  document.body.append(ball);
+
+  // centers the ball at (pageX, pageY) coordinates
+  function moveAt(pageX, pageY) {
+    ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
+    ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
+  }
+
+  // move our absolutely positioned ball under the pointer
+  moveAt(event.pageX, event.pageY);
+
+  function onMouseMove(event) {
+    moveAt(event.pageX, event.pageY);
+  }
+
+  // (2) move the ball on mousemove
+  document.addEventListener('mousemove', onMouseMove);
+
+  // (3) drop the ball, remove unneeded handlers
+  ball.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    ball.onmouseup = null;
+  };
+
+};
+
+
+    </script>
+</body>
+</html>

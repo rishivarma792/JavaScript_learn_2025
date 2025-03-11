@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // CASE 1 : PROMISE ANY 
+        const prom1 = new Promise((resolve,reject)=>{
+        // resolve("done1") ;
+        reject("not done1") ;   
+       })
+       const prom2 = new Promise ((resolve,reject)=>{
+        // resolve("done2");
+        reject("not done2"); 
+
+      })
+      Promise.any([prom1,prom2]).then((val)=>{
+ console.log(val);
+      })
+//       Promise.any([]).then((val)=>{
+//  console.log(val);
+//       })  // all  are rejected 
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

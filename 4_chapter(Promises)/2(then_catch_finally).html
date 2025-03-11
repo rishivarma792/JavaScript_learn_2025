@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //  then 
+        // let promise1 = new Promise(function (success, fail) {
+        //     let a = 1;
+        //     setTimeout(() => {
+        //         console.log("inside promise 1 timeout executing");
+        //         if (a) {
+        //             success("success");
+
+        //         }
+        //         else {
+        //             fail("failed");
+        //         }
+        //     }, 3000)
+        // });
+
+        // promise1.then(
+        //     (successValue) => {
+        //         console.log(successValue);
+
+        //     }, (failValue) => {
+        //         console.log(failValue);
+        //     })
+
+            // console.log("C-2 CATCH METHOD START\n") ; 
+
+            //CATCH : 
+            let promise2 = new Promise(function (success, fail) {
+            let a = 1;
+            setTimeout(() => {
+                console.log("inside promise 2 timeout executing");
+                if (a) {
+                    success("success");
+
+                }
+                else {
+                    fail("failed");
+                }
+            }, 3000)
+        });
+
+        promise2.finally(()=>{
+            console.log("finally method");
+        }).then(
+            (successValue) => {
+                console.log(successValue);
+
+            }, (failValue) => {
+                console.log(failValue);
+            }).catch((failValue)=>{   //here catch is not executed as in then the reject case is already handled 
+                console.log("in catch" + failValue);
+            });
+            
+            // promise 2 is alsready hadnled 
+            console.log(promise2);
+            promise2.then((failValue)=>{
+                console.log("in catch " + failValue);
+            });
+
+
+
+            // FINALLY:
+            
+
+    </script>
+
+
+
+
+</body>
+
+</html>

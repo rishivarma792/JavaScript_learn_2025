@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is task 1 </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure magni eligendi minus animi mollitia voluptates voluptas quaerat eius dicta ab rerum quae provident dignissimos hic aut odio excepturi recusandae ducimus consequuntur id, suscipit laborum. Asperiores accusamus iure quis, praesentium repellat quod eligendi vero impedit eum nemo cupiditate accusantium molestiae est nostrum deleniti facilis quaerat perspiciatis illum fugiat laboriosam, ut sit voluptatum culpa! Sed aut, cupiditate obcaecati commodi vero ad eius ea unde repellat, suscipit deserunt quidem iusto. Error fuga nobis quidem consequuntur iure quasi, libero ipsa corrupti quibusdam, saepe vero magnam doloribus impedit earum voluptas obcaecati voluptatum animi ducimus reiciendis?</p>
+
+    <script>
+
+
+function showNotification(options){
+
+    let body = document.body ; 
+    let div = document.createElement('div') ; 
+    div.innerHTML = options.html ; 
+    div.style.position = "absolute" ; 
+    div.style.top = options.top + "px" ; 
+    div.style.right = options.right + "px" ;
+    div.classList.add(options.clasName) ; 
+    body.append(div) ; 
+
+    setTimeout(() => {
+        div.style.display = "none" ; 
+    }, 1500);
+
+}
+let i = 1  ; 
+setInterval(() => {
+
+    
+    showNotification({
+      top: 20, // 10px from the top of the window (by default 0px)
+      right: 20, // 10px from the right edge of the window (by default 0px)
+      html: `Hello! ${i++}`, // the HTML of notification
+      className: "welcome" // an additional class for the div (optional)
+    });
+}, 2000);
+        // shows an element with the text "Hello" near the right-top of the window
+    </script>
+    
+</body>
+</html>

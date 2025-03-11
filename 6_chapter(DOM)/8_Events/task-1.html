@@ -1,0 +1,53 @@
+<!-- 
+->hide a text on clicking on a button  
+->t-2 : a button to hide itself 
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="task-1">
+
+        <button class="button-1">
+           click me 
+        </button>
+        <p>this is text</p>
+    </div>
+    <div class="task-2">
+
+        <button class="button-2">
+           click me 
+        </button>
+    </div>
+
+    <script>
+        //    T-1 : HIDE A TEXT 
+        let button1 = document.querySelector('.button-1'); 
+         button1.addEventListener("click", (event)=>{
+            let element = event.currentTarget ; 
+   console.log(element.nextElementSibling); // p 
+   let p = element.nextElementSibling ; 
+//    p.style.display = "none";
+// or 
+    p.hidden = "true" ; 
+         })
+
+        //  T-2 : button to hide itself 
+
+ let button2 = document.querySelector('.button-2'); 
+         button2.addEventListener("click", (event)=>{
+            let element = event.currentTarget ; 
+    element.hidden = "true" ;  
+    // or
+    // this.hidden = "true" ;  // if arrow function it wont work 
+         })
+    </script>
+    
+</body>
+</html>

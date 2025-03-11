@@ -1,0 +1,77 @@
+<!-- 
+-> 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+// C-1 : WRITE OF FUNCTIONS DONT WORK 
+
+let animal = {
+     eats : true ,
+     walk : function (){
+        console.log("hi");
+     }
+}
+
+let rabbit = {
+    __proto__ : animal
+}
+rabbit.walk = function (){
+    console.log("this is the function in rabbit object") ; 
+}
+rabbit.walk() ;  // walk is now rabbit own function and in animal it is different 
+
+// C-2 PROPERTIES KEPT FOR EACH OBJECT IS INDEPENDENT 
+let user = {
+    firstName : "Rishi",
+    lastName : "Varma",
+
+    set fullName(value){
+       [this.firstName , this.lastName] = value.split(" ") ; 
+    } , 
+    get fullName(){
+        return `${this.firstName} and ${this.lastName}`
+    }
+
+}
+
+let admin = Object.create(user);  
+ admin.isAdmin = true ; 
+console.log(admin.firstName); 
+admin.firstName = "raghav";
+console.log(user.firstName);
+console.log(admin.firstName); 
+
+
+// C-3 : the inherting object never modify the prototype object propertuy or methods 
+
+let prototype1 = {
+   sleeping : true 
+
+}
+let object1 =  {
+    
+    __proto__ : prototype1 
+
+}
+
+object1.sleeping = false ; 
+console.log(prototype1.sleeping) ; //true  
+console.log(object1.sleeping) ; // false shows it does not change the original protype object1 sleeping value 
+console.log(object1);
+
+
+    </script>
+    
+</body>
+</html>

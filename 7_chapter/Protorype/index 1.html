@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments with Mentions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        
+
+        <div class="comments-box">
+            <h1>Comments</h1>
+
+            <!-- Comments List -->
+            <div id="commentsList" class="comments-list"></div>
+
+            <!-- Comment Input -->
+            <div class="comment-input-container">
+                <div class="input-wrapper">
+                    <!-- Mentions Dropdown -->
+                    <div id="mentionsDropdown" class="mentions-dropdown hidden"></div>
+                    
+                    <!-- Hidden display area for highlighted text -->
+                    <div id="displayArea" class="display-area"></div>
+                    
+                    <textarea id="commentInput" placeholder="Write a comment... (Use @ to mention users)"
+                        rows="3"></textarea>
+
+                    <!-- Buttons inside textarea -->
+                    <div class="buttons-container"> 
+                        <button id="commentButtonArchive" class="button button-secondary">Comment and archive</button>
+                        <button id="commentButton" class="button button-primary">Comment</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html> 

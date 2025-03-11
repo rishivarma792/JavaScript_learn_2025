@@ -1,0 +1,57 @@
+<!-- 
+-> ANONYMOUS FUNCTION : 
+
+->c2 - immediately invoked function execution : 
+    
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // C1 - anonymous func creation 
+
+        console.log((
+            
+            function () {
+             console.log("hi");
+            }
+        ) ) ;     // always return a function object
+
+       const func1 =  
+            
+            function () {
+             console.log("hi");
+            }
+         ; 
+
+
+        func1();
+
+        // c-2 : this is iife
+        const func2 =(  
+            
+            function () {
+             console.log("this is iife");
+            })() 
+         ; 
+
+         const obj1 = {
+            name : "rishi"
+         } ; 
+
+         const func3 = (
+            function (){
+                console.log(obj1.name) ; 
+            }
+         )(obj1)  ; 
+
+    </script>
+</body>
+</html>

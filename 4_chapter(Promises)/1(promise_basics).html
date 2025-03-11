@@ -1,0 +1,131 @@
+<!-- 
+->PROMISES BASICS :  
+->
+->c-3 : what does a thne method return
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//   CASE-1 :  promise new keyword : 
+
+// let promise1 = new Promise(function(resolve,reject){
+
+//     setTimeout(()=>{
+//      resolve("done");
+     
+//     },3000)
+// })
+
+// console.log(promise1);
+
+// promise1.then((value)=>{
+//     console.log("promise completed");
+// })
+
+
+
+// CASE-2 : using resolve reject in then and catch 
+
+// let promise2 = new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         console.log("performing async task.");
+//      resolve("done"); 
+//     // reject(new Error("error occured!"));
+//     },3000)
+// })
+// promise2.then(
+//     (value)=>{
+//         // to handle resolve
+//         console.log(value) ;
+// },(error)=>{
+//         // to handle reject
+//         console.log(error) ;
+// })
+
+// CASE-3: checking the return of some methods like then 
+
+
+// let promise3 = new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         console.log("performing async task 2.");
+//         // resolve("promise"); 
+//     // reject(new Error("error occured!"));
+//     reject("error occured");
+//     },3000)
+
+// }); 
+
+// let thenval = promise3.then((val)=>{
+//     console.log("value is " + val) ; 
+//     return "thenPromiseFulfilled" ; // will become the promise reult 
+    
+// })
+// // for error 
+// let thenval2 = promise3.catch((val)=>{
+//     console.log("value is " + val) ; 
+//     return "thenPromiseRejected" ; // will become the promise reult 
+    
+// })
+// console.log("before executor function executed ");
+// console.log(promise3) ; 
+// // console.log(thenval);
+// console.log(thenval2); // returns a new promise that state is fulfilled not rejected showing the catch method is fulfilled 
+
+// setTimeout(()=>{
+//         console.log("after then executed \n"); 
+//         console.log("then return object")
+//         console.log(thenval2);
+
+//         console.log("promise value");
+//         console.log(promise3);
+//     // reject(new Error("error occured!"));
+//     },5000)
+
+
+// CASE 4 : SYNCHROUNOUS NATURE OF PROMISE ->
+
+
+// const prom4 = Promise.resolve("done");
+// console.log(prom4);  // fulfilled and promise can be synchronous 
+// prom4.then((val)=>{  // but then is asynchronous 
+//     console.log(val);
+// })
+// console.log("hi");
+
+// const prom5 = new Promise([1,2]) ;  cant be created 
+// console.log(prom5);
+
+// CASE 5 : GENERATOR FUNCTION OBESERVATION : it is invoked immediately and the varaible changed effect immediately 
+let a = 10 ; 
+const prom6 = new Promise((resolve,reject)=>{
+     a = 20 ; 
+     setTimeout(() => {
+        
+         resolve("done") ; 
+     }, 2000);
+}) ; 
+prom6.then((val)=>{
+    console.log(val);
+})
+console.log(a); // 20 is printed
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

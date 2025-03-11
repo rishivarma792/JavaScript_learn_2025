@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <p data-about-p="age"></p>
+        <p data-about-p="gender"></p>
+    </div>
+    
+    <script>
+    
+    let para1 = document.querySelectorAll('p[data-about-p]') ; 
+    console.log(para1);
+    for(let p of para1){
+        let aboutValue = p.getAttribute("data-about-p") ; 
+        // console.log(aboutValue);
+        p.innerHTML = aboutValue ; 
+    }
+
+    // also can acces them suing dataset
+    for(let p of para1){
+        let aboutValue = p.dataset.aboutP ; 
+        console.log(aboutValue);
+    }
+
+    // we can also write 
+    para1[0].dataset.aboutP = "this is wrting the attribute value " ;
+
+    for(let p of para1){
+        let aboutValue = p.dataset.aboutP ; 
+        console.log(aboutValue);
+    }
+    
+    </script>
+</body>
+</html>

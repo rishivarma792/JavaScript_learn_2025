@@ -1,0 +1,45 @@
+<!-- 
+->using function() to create a function  
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        // using constuctor to create functions 
+        const sum  = new Function("a" , "b" , " a = a*b ; a = a*a ; return a") ; 
+        console.log(sum(1,2)) ;
+
+        // rest parameter 
+        function func1(...values){
+            this.value = values ; 
+        }
+        const person1 = new func1([1,2,3]) ; 
+        console.log(person1.value) ; 
+
+
+        function fun1(){
+
+        }
+
+        const func2 = function fact(n){
+
+            if(n==1){
+                return 1 ; 
+            }
+
+            return n * fact(n-1) ; 
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!-- 
+-> about functions : 
+->c1 : argumets and parameter in the function  and pass by sharing we can add new properties 
+->c2 :  deferent ways to declare functions 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+// c-1 :  object and arrays uses pass by sharing 
+     function updateModel(obj){
+       
+        obj.model = "civic" ; 
+        obj.year = "2014" ; 
+        // obj = null ; 
+
+     }
+
+     let obj1={ 
+        car : "car-1" , 
+        model : "honda"
+
+     } ;
+     
+     console.log(obj1.model); 
+     updateModel(obj1); 
+    //  obj1 = null ; 
+     console.log(obj1.model);
+     console.log(obj1.year); // we can add new property 
+
+// c-2 : deferent ways to declare functions 
+
+// ->declaration 
+function mul1(a,b) {
+    return a*b ; 
+}
+
+// ->expression
+const multifunc1 = function multi2(a,b){
+    return a*b ; 
+} 
+const multifunc2 = function (a,b){
+    return a*b ; 
+}
+
+// arrow 
+const multi3 = (x,y)=>{
+    return x*y ; 
+}
+
+// method
+const obj2 = {
+    multi4(x,y){
+return x*y ; 
+    }
+};
+
+console.log(obj2.multi4(1,2));
+      
+     
+
+
+
+
+    </script>
+    
+</body>
+</html>

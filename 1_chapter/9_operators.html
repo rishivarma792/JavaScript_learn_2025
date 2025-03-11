@@ -1,0 +1,57 @@
+<!-- 
+->Operators : operands and operators 
+->when 1 operand unary 
+->if 2 operand then it is binary 
+-> operators in js : **(exponent)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // let exponentExample = 2**3 ; 
+        // console.log(exponentExample);
+
+        // C-2 : + ON STRINGS GOES FROM LEFT TO RIGHT 
+        // console.log(1+2+'2') ; // '42'
+        // console.log('1' + 2 + 2) ; //'122'
+        // console.log(typeof ('1' + 2 + 2)) ; //'122'
+
+        //C-3 :  other operators on strings  :
+        // console.log(6-'2') ; 
+        // console.log('6'/'2'); 
+
+        // C-4 : + OPERAOR ON UNARY CONVERTS OTHER DATA TYPES INTO NUMBER S
+        let a1 = 1 ; 
+        a1 = +a1 ;  // this is not ++ 
+        console.log(a1);
+        let  yoeInCompany1 = '10' ; 
+        let  yoeInCompany2 = '5' ; 
+        // now if you want complet yoe we need to convert them into number so u can use +
+        let totalYoe = +yoeInCompany1  +  +yoeInCompany2 ; 
+        console.log(totalYoe); // 15
+        console.log(+null) ; // 0
+        console.log(+true) ;
+        // here we are trying to convert apple into number which is not a correct operation so NaN resiults 
+        console.log(+"apple") ; 
+        console.log(+undefined) ; 
+        console.log(+NaN) ;
+        // console.log(+Symbol("hi"));  // we can not convert a symbol to a number 
+
+        // C-5 : applying ++ --
+        // console.log(5++);  // cant be applied to number 
+
+
+
+
+    </script>
+    
+</body>
+</html>

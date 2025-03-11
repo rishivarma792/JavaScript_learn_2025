@@ -1,0 +1,69 @@
+
+<!-- 
+->lets see in a box what are the elment sizess  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .case-1 {
+      width: 300px ;
+      height: 200px;
+      border: 25px solid #E8C48F;
+    padding: 20px;
+    overflow: auto;
+
+    }
+  </style>
+</head>
+<body>
+<main style="position: relative;">
+
+  <div class="case-1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem deleniti perspiciatis blanditiis qui aliquid omnis esse, corrupti, explicabo laudantium ab. Maiores inventore voluptatibus aspernatur expedita error repellendus, corrupti sunt architecto quasi, rem quia eius blanditiis illo, dignissimos excepturi consequuntur qui nam sapiente explicabo. Eveniet distinctio perferendis dolore impedit magnam officia ducimus enim, dolores repellendus, mollitia officiis. Fugit dolorum quas hic quaerat ratione labore magnam fugiat nihil nulla iure, magni porro aperiam maxime. Odio earum ad, at neque vitae architecto sint quibusdam maxime nihil id saepe corporis? Perspiciatis quis distinctio obcaecati accusantium totam voluptatum sint sit. Quas sapiente fugit aliquam.
+    <hr>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nemo aperiam quas ipsam id! A doloremque sed corrupti quo impedit exercitationem dolor perferendis pariatur tempora consequatur quis, officia facere sequi iste quibusdam omnis deleniti? Omnis, ad facilis. Illo, neque numquam harum nobis sint excepturi earum nulla totam repellat ducimus laborum quaerat saepe necessitatibus mollitia quos tenetur! Quia in voluptatem natus dolore sed, quos cupiditate alias consectetur laudantium minima repellat impedit facilis, inventore id ut placeat laborum. Incidunt culpa excepturi vel commodi, dolores sequi fuga impedit maxime a? Repellat voluptatem provident maiores ipsa excepturi eveniet? Molestias architecto cumque voluptates quod deserunt?
+  </div>
+  
+</main>
+  
+  <script>
+    
+    //  CASE 1 : EXPLARONG PROPERTIES OF SIZES 
+    // offSetPareant , ofSetTop/Left
+    let div1 = document.querySelector('.case-1');
+    console.log(div1.offsetParent);
+    console.log(div1.offsetLeft);
+    console.log(div1.offsetTop); 
+
+    // offsetWidth/height
+    console.log(div1.offsetWidth); 
+    console.log(div1.offsetHeight); 
+
+    // client 
+    console.log(div1.clientTop);
+    console.log(div1.clientLeft);
+    console.log(div1.clientWidth); // leaving scroll bar 
+    console.log(div1.clientHeight);
+
+    // scroll 
+    console.log(div1.scrollHeight); 
+    console.log(div1.scrollWidth);
+    div1.scrollTop = "200" ;   // we can write 
+    console.log(div1.scrollLeft);
+
+
+    
+
+
+
+
+
+  </script>
+  
+</body>
+</html>

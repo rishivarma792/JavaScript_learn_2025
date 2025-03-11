@@ -1,0 +1,117 @@
+<!-- 
+->createcalender : 
+  -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <!-- <table>
+        <th>
+            <tr>
+                <td>mon</td>
+                <td>mon</td>
+                <td>mon</td>
+                <td>mon</td>
+
+            </tr>
+        </th>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+
+</tr>
+
+    </table> -->
+    <script>
+     
+     let date = new Date(2012,8,1) ;  
+     let date1 = new Date(2012,8,2) ;  
+
+     console.log(date);
+     console.log(date1);
+
+     console.log(date.getMonth());
+
+     let body = document.body ; 
+ 
+    function calender(elem,year,month){
+
+    let table = document.createElement('table');
+    
+    let tHead = document.createElement('tr') ; 
+     
+    let days = ["MO","TU","WE","TH","FR","SA","SU"] ; 
+    for(let a = 0 ; a<7 ; a++)
+    {
+        let th = document.createElement('th') ;
+        th.innerText = days[a] ; 
+        tHead.append(th) ; 
+    }
+    console.log(tHead);
+    table.append(tHead);
+    
+    let month1 = new Date(year,month).getMonth();
+    // console.log(month1);
+    let firstTime = true ; 
+    let day = 1 ; 
+  
+    
+    // if(firstTime){
+        let tr = document.createElement('tr') ; 
+        let day1 = new Date(year,month,1).getDay() ;
+        console.log(day1); 
+        for(let k=1;k<=day1-1 ; k++){
+            let td = document.createElement('td'); 
+            tr.append(td); 
+        }
+        for(let k = 1 ; k<=7-day1+1 ; k++){
+            console.log(k);
+            let td = document.createElement('td'); 
+            td.textContent = day++;
+            tr.append(td) ; 
+        }
+        console.log(tr);
+        table.append(tr) ; 
+        // firstTime = false ; 
+    // }
+    while(new Date(year,month,day).getMonth() == month1){
+        
+        let tr = document.createElement('tr') ; 
+        
+        for(let i = 0 ; i<7 ; i++){
+            let td = document.createElement('td');
+
+            td.textContent = day++;
+            tr.append(td) ;
+        }
+        console.log(tr);
+        table.append(tr) ; 
+    }
+    
+    document.body.append(table);
+    }
+     calender(document.body,2012,10) ; 
+ 
+
+
+
+     
+
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,36 @@
+<!-- 
+->function expression : 
+  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+    //  c1 - func expression 
+    // const a1 = this is a assignment expression insde this we declare the function 
+    const a1 = function (){
+        console.log("creating funct using anon and func expression ");
+    }
+    a1();
+
+    // c2 : a recrsive named function  
+    const a2 = function fact(n){
+         if(n==1){
+            return 1 ; 
+         }
+         return n*fact(n-1) ; 
+    }
+    console.log(a2(4));  
+    </script>
+    
+</body>
+</html>

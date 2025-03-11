@@ -1,0 +1,50 @@
+<!-- 
+->function parameter and argumetns 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//  c1 : 
+    function func1(a,b,c){
+        console.log(a + " " + b + " " + c) ; 
+    }
+    func1(1,2,3,4) ;
+
+
+    // c2 : rest and argument object 
+    
+    function sumall(...val){
+        // for(var i of val){
+            //     sum = sum + i  ;
+            // }
+            
+            var sum = 0 ; 
+        for(var i = 0 ; i<arguments.length ; i++){
+            sum = sum + arguments[i] ; 
+        }
+        return sum ; 
+    }
+    var x1 = sumall(1,2,3,4) ; 
+    console.log(x1);
+
+
+    const a1 = ()=>{
+        console.log("abc");
+    }
+
+    
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!-- 
+->insert methods : 
+->appen , prepend , before, after , replaceWith 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <ul class="list">
+            <li>One</li>
+            <li>two</li>
+            <li id="thirdLi">three</li>
+            <li id="fifthLi">five</li>
+
+        </ul>
+    </div>
+
+    <script>
+        // CASE 1 : 
+        let ul1 = document.getElementsByClassName('list')[0] ; 
+        console.log(ul1);
+        
+        // append and prepend
+        let append1 = document.createElement('li') ; 
+        append1.innerText = "6 appended" ; 
+        let prepend1 = document.createElement('li') ; 
+        prepend1.innerText = "0.5 prepended" ; 
+        ul1.prepend(prepend1);
+         ul1.append(append1);
+
+        //  after before 
+        let thridLi = document.querySelector('#thirdLi') ; 
+
+        let before1 = document.createElement('li') ; 
+        before1.innerText = "2.9 before" ;
+        let after1 = document.createElement('li') ; 
+        after1.innerText = "3.1 after" ; 
+        thridLi.before(before1) ;
+        thridLi.after(after1);
+       
+        // replaceWith : 
+        let fifthLi = document.querySelector('#fifthLi') ;
+        let replaceElement1 = document.createElement('li') ; 
+        replaceElement1.innerText = "4 replacing with 5" ;
+        fifthLi.replaceWith(replaceElement1); 
+        
+        
+        
+        
+
+    </script>
+    
+</body>
+</html>

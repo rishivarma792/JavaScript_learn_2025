@@ -1,0 +1,73 @@
+<!-- 
+->USING object.create() : it is most power full can also add descriptors  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <SCRIPT>
+        // CASE -1 : Object.create() : 
+        let animal = {
+            isAnimal : true ,
+            eats : true 
+        }
+   
+        // HOW TO WRITE A PROPERTY DESCRIPTOR :
+        let rabbit = Object.create(animal,{
+            jumps : {
+                value : true,
+                enumerable : true // to be kept to iterate in for in loop 
+            },
+            name : {
+                value : "rabbit"
+            }
+        })
+        rabbit.name2 = "rabbit2";
+        console.log("for in loop");
+        for(let i in rabbit){
+            console.log(i);
+        }
+        console.log("END for in loop");
+
+
+        console.log(rabbit.jumps) ; 
+        console.log(rabbit.name) ; 
+        console.log(rabbit.eats) ; 
+
+        
+        // CASE 2 :  TO DEEP COPY A OBJECT WE CAN USE Object.create()
+        let obj1 = {
+            hi : "hi" 
+        }
+        let obj2 = obj1 ;  //shallow copy 
+
+        console.log(obj2.hi);
+        obj2.hi = "hello" ; 
+        console.log(obj1.hi);
+
+        let mainObj1 = {
+            name : "RIshi",
+            age : 22
+        }
+        
+        console.log(Object.getPrototypeOf(mainObj1)) ; 
+        console.log(Object.getOwnPropertyDescriptors(mainObj1));
+        let deepCopyObj = Object.create(Object.getPrototypeOf(mainObj1),Object.getOwnPropertyDescriptors(mainObj1)) 
+        
+        deepCopyObj.name = "raghav" ; 
+        console.log(deepCopyObj.name) ; // raghav 
+        console.log(mainObj1.name);  // rishi
+
+
+
+    </SCRIPT>
+    
+</body>
+</html>
+

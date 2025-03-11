@@ -1,0 +1,34 @@
+<!-- 
+->Closet : get the nearest ancestor for a given selector return a node  
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <ul class="book">
+            <li class="chapter">
+                <span class="span1">this is span </span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        // CASE 1 : EXMAPLE OF CLOSET 
+     let span1 = document.querySelector('.span1');
+     console.log(span1) ; 
+     console.log(    span1.closest('.chapter') );
+     console.log(   span1.closest('.book'));
+
+   
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!-- 
+->methods : 
+->Array.from() : to create array from object  
+->includes(el , start) : 
+->join(<separator>) : 
+->keys() : return iterating object with keys of array
+->reverse() : overrites the array 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <script>
+     
+    //  Array.from() : 
+    // to create a array from set and manipulating its data 
+    let set1 = new Set([1,2,3,4]);
+    // console.log(set1); 
+    // converting set to array : 
+    let newArr1 = Array.from(set1,(el)=> el=el*2,"thisValue") ; 
+    console.log("array from set: "+ newArr1); 
+    let newArr2 = Array.from([1,2,3]);
+    console.log("new" + newArr2);
+
+    // includes(ele,start) : 
+    let arr1 = [1,2,3]; 
+    console.log(arr1.includes(1));
+
+    // join
+    let arr2 = ["hello" , "world"];
+    console.log(arr2.join(" and "));
+    let arr3 = [
+        "name=Rishi","city=hyd","hobby=chess"
+    ]
+    console.log(arr3.join("&"));
+
+    // Array.of(argumetns) : 
+    
+    function createArray(...el){
+        return Array.of(el) ; 
+    }
+    console.log(createArray(1,2,3));
+
+    // reverse : 
+    let arr4 = [5,4,3,2,1]; 
+    console.log(arr4.reverse());
+    console.log(arr4);// overwrites 
+
+    
+    
+
+
+
+   
+
+    </script>
+    
+</body>
+</html>

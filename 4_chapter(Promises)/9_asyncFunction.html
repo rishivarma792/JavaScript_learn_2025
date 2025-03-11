@@ -1,0 +1,82 @@
+<!-- 
+->ASYNC FUNCTION : 
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        //  CASE : HANDLING REJECTED PROMISES IN AWAIT USING TRY CATCH BLOCK : 
+        // async function example() {
+        //     const promise = new Promise((resolve, reject) => {
+        //         setTimeout(() => reject(new Error('Promise rejected!')), 1000);
+        //     });
+
+        //     try {
+        //         const result = await promise;
+        //         console.log('Result:', result);
+        //     } catch (error) {
+        //         console.error('Caught an error:', error.message); // "Caught an error: Promise rejected!"
+        //     }
+        // }
+
+        // example();
+
+        //CASE 3 :  return value of async functions
+
+        async function promisefunc1() {
+            const a = await new Promise((resolve, reject) => {
+                console.log("insdie promise");
+                setTimeout(() => {
+                    resolve("done");
+                }, 3000)
+            })
+            console.log(a);
+            return a;
+        }
+
+        let a1 = promisefunc1();
+        console.log(a1);
+        setTimeout(() => {
+            console.log(a1); // returns a promise with resolve value 
+
+
+        }, 5000)
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- normal example  -->
+<!-- //  function resolveAfter2sec(){
+//  const promise = new Promise(
+//     function generatorFunction(resolve,reject){
+//     setTimeout((val)=>{
+//      resolve("resolved") ; 
+//     },3000)
+//     }
+//  )    
+//  return promise ; 
+//  }
+
+//  async function asyncCall(){
+//     console.log("calling");
+//     const result  =await resolveAfter2sec() ; 
+//     console.log(result);
+//  }
+//  asyncCall(); -->

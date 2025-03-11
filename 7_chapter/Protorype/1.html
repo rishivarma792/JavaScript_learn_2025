@@ -1,0 +1,73 @@
+
+<!-- 
+->PRORORYPE INHERITANCE : 
+->Creating protopes object and creating an object top of it and pointing this to the prototype object 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+   
+   let prototypeObject1_Animal = {
+    eats : true  
+   }
+   let rabbit = {
+    jumps : true
+   }
+//    now we can refernce rabit prototype to the animal object using __proto__
+rabbit.__proto__ = prototypeObject1_Animal ; 
+console.log(rabbit.eats);
+console.log(prototypeObject1_Animal.jumps); 
+
+// C 2 :  ANOTHER WAY OF REFERENCEING THE OBJECT 
+let user = {
+    name : "rishi",
+    id : 1
+}
+let guest =  {
+    username : "rishi",
+    __proto__ : user
+
+}
+let admin = {
+    username : "rishi varma",
+    password : "arv",
+    __proto__ : user
+}
+console.log(guest.id) ; 
+console.log(admin.name);
+
+// C 3 : iS MULTILEVEL INHERITANCE POSSIBLE : yes it is possible 
+
+let office = {
+    company : "paltech" , 
+    office : "n-heights"
+}
+let g1 = {
+    level : "g0",
+    workhours : "8",
+    laptop : "Dell" ,
+    __proto__ : office 
+}
+let g0 = {
+    level : "g1",
+    workhours : "8.45",
+    __proto__ : g1 
+}
+console.log(g0.laptop);
+console.log(g0.office) ; 
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+
+  <script>
+
+let data = {
+    "Fish": {
+      "trout": {},
+      "salmon": {}
+    },
+  
+    "Tree": {
+      "Huge": {
+        "sequoia": {},
+        "oak": {}
+      },
+      "Flowering": {
+        "apple tree": {},
+        "magnolia": {}
+      }
+    }
+  };
+  
+//   UL also must be dynamicaaly inserted
+
+function create(obj){
+
+    if(!Object.keys(obj).length) return  ; 
+    
+    let ul = document.createElement('ul') ;
+    console.log(obj);
+    for(let k in obj){
+    
+            let li = document.createElement('li') ; 
+            li.textContent = k  ; 
+
+            let childrenUl = create(obj[k]) ; 
+            if(childrenUl){
+                li.append(childrenUl);
+            }
+            ul.append(li) ; 
+        }
+        return ul ; 
+    }
+
+    
+ let mainUl = create(data);
+ console.log(mainUl);
+ document.body.append(mainUl);
+
+
+  </script>
+
+    
+  </body>
+  </html>

@@ -1,0 +1,47 @@
+<!-- 
+->working with dom -1 : 
+-> 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Working on dom concept</h1>
+        <ol>
+            <li>about tp most properties of document</li>
+            <li>other document properties </li>                    
+        </ol>
+    </div>
+    <p>this is another child node of body</p>
+    <script >
+// TOP MOST PROPERTIES : 
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.body);
+
+//C-2 : CHILD NODES  :  
+console.log(document.body.childNodes[2]);  //cant give the child after the script   
+console.log(document.body.childNodes.length);  //return length of child node
+console.log(document.body.hasChildNodes());  //cant give the child after the script   
+console.log(document.body.firstChild) ; 
+console.log(document.body.lastChild) ; 
+console.log("\n")
+  
+// C-3 : nextSibiling and previousSibiling and parentNode
+console.log(document.body.childNodes[0].parentNode);
+console.log(document.body.childNodes[0].nextSibling);
+console.log(document.body.childNodes[2].previousSibling);
+
+  
+  
+  </script>
+
+  <p>after the script tag</p>
+</body>
+</html>

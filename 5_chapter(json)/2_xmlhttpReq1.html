@@ -1,0 +1,68 @@
+<!--
+->xml httprequrst : 
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let xhr = new XMLHttpRequest();
+        if (xhr.readyState == 0){
+        console.log("Intitial state") ; 
+    }
+        xhr.open("GET","https://catfact.ninja/fact",true) ;
+    if (xhr.readyState == 1){
+        console.log("opened state") ; 
+    }  
+     
+        xhr.send();
+
+//         xhr.onload = function() {
+//   alert(`Loaded: ${xhr.status} ${xhr.response}`);
+// };
+
+// xhr.onerror = function() { // only triggers if the request couldn't be made at all
+//   alert(`Network Error`);
+// };
+
+// xhr.onprogress = function(event) { // triggers periodically
+//   // event.loaded - how many bytes downloaded
+//   // event.lengthComputable = true if the server sent Content-Length header
+//   // event.total - total number of bytes (if lengthComputable)
+//   alert(`Received ${event.loaded} of ${event.total}`);
+// };
+
+xhr.onreadystatechange = function (){
+    if (xhr.readyState == 0){
+        console.log("Intitial state") ; 
+    }
+    if (xhr.readyState == 1){
+        console.log("opened state") ; 
+    }  
+    
+    if (xhr.readyState == 2){
+        console.log("response header recived") ; 
+    } 
+
+    if (xhr.readyState == 3) {
+    console.log(" response is loading") ; 
+  }
+  if (xhr.readyState == 4) {
+    // request finished
+    console.log("req complete");
+  }
+}
+
+    </script>
+    
+</body>
+</html>

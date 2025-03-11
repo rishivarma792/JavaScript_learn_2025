@@ -1,0 +1,43 @@
+<!-- 
+-> Global objects :  globalthis
+->it is similar to window object for a browser there will be only one global object that is window 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//   console.log(window);
+//   console.log(globalThis);
+
+  function func1(){
+    return  ; 
+  }
+//  adding to global scope 
+ globalThis.b = 10 ; 
+  var a = 0 ; 
+  console.log(typeof b);
+
+  console.log(Number.POSITIVE_INFINITY);
+
+//   argumetns in js 
+
+function func2(x){
+
+    for(let i = 0 ; i<arguments.length ; i++){
+    console.log(arguments[i]);
+    }
+}
+
+func2(1,2,3,4) ; 
+    </script>
+    
+</body>
+</html>
