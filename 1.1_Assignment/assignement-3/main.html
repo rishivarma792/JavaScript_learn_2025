@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arv forms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+    <main>
+        <!-- QUESTION MANAGEMENT -->
+        <div class="question-management">
+            <h2 class="question-management__heading">Question Managemnt</h2>
+            <hr>
+            <form action="" class="question-management__form">
+                <!-- form naming  -->
+                <div class="question-management__form-naming">
+                    <input type="text" class="question-management__form-name" placeholder="Enter form name"
+                        value="Untitilled Form">
+                    <input type="text" class="question-management__form-description" placeholder="form discription">
+                </div>
+                <!-- QUESTION ENTRIE START  -->
+                <div class="question-management__questions-container">
+                    <div class="question-management__question-item">
+                        <div class="question-management__question-drag-handler">drag</div>
+                        <div class="question-management__question-type-selector-container">
+
+                            <div class="question-management__question">
+                                <div>Question Lorem ipsum dolor sit ame </div>
+                                 <!-- <input type="text"> -->
+                            </div>
+                            <div class="question-management__type-selector-container hidden">
+                                <select name="type-selector" id="type-selector">
+                                    <option value="text" >text</option>
+                                    <option value="number">number</option>
+                                    <option value="date">date</option>
+                                    <option value="text">text</option>
+                                    <option value="document">document </option>
+                                    <option value="dropDown-singleselect">DropDown-Single select</option>
+                                    <option value="dropDown-multiselect">DropDown-Multi select</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="question-management__question-options-container">
+                            <!-- <div class="question-management__question-input--text">
+                                <input type="text" placeholder="answer text" disabled>
+                            </div> -->
+                            <!-- <div class="question-management__question-input--number">
+                                <input type="number" placeholder="answer number" disabled>
+                            </div> -->
+                            <!-- <div class="question-management__question-input--date">
+                                <input type="date" disabled>
+                            </div> -->
+                            <!-- <div class="question-management__question-input--document">
+                                <input type="file" disabled>
+                            </div> -->
+                            <div class="question-management__question-input--dropdown question-management__question-input--dropdown-single-select">
+
+                                    <div class="dropdown-option-group ">
+                                        <label for="option">1</label>
+                                        <input type="text" value="option" id="option" >
+                                        <div class="dropdown-option__action-btn-delete dropdown-option__action-btn"><i class="fa-solid fa-xmark"></i></div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        <div class="question-management__validation-display-container">
+                            <div class="validation__question-type--select">
+
+                                <select name="vali" id="valie">
+                                    <option value="numner">number</option>
+                                    <option value="text">Text</option>
+                                    <option value="date">Date</option>
+                                </select> 
+                            </div>
+                            <div class="validation__options">
+                                
+                                <div class="validation__options-1 validation-option validation-option-date">
+                                    <select name="options-1" id="options-1">
+                                        <option value="min-date">Min Range of Date</option>
+                                    </select> 
+                                    <input type="date" >
+                                </div>
+                                <div class="validation__options-2 validation-option validation-option-date">
+                                    <select name="options-2" id="options-2">
+                                        <option value="max-date">Max range of date</option>
+                                    </select> 
+                                    <input type="date" >
+                     
+                                </div> 
+                            </div>
+                        </div>
+                            
+                        
+                    
+                        <hr>
+                        <div class="question-management__question-actions-validations-container hidden">
+                            <button class="btn question-management__question-action--delete">Delete</button>
+                            <button class="btn question-management__question-validation--required ">Required</button>
+                            <button class="btn question-management__question-validation--response-validation ">Response
+                                validation</button>
+                        </div>
+                </div>
+                </div>
+                <div class="question-management__question-add-btn-container">
+                    <button class="btn question-management__question-action question-management__question-action--add">
+                        Add Question
+                    </button>
+                </div>
+                <!-- QUESTION ENTRIES END  -->
+                <div class="question-management__question--save-preview-btn-container">
+                    <button class="btn question-management__btn-save">
+                        Save
+                    </button>
+                    <button class="btn question-management__btn-preview">
+                        preview
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- QUESTION PREVIEW -->
+        <div class="question-preview">
+
+        </div>
+
+    </main>
+
+    <script src="./main.js" type="module"></script>
+</body>
+
+</html>

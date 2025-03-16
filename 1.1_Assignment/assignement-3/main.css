@@ -1,0 +1,180 @@
+
+body{   
+    --miniSmallText : 0.8rem ; 
+    --smallText : 1.2rem ; 
+    --mediumText : 1.4rem ; 
+    --largeText : 1.8rem ; 
+    --extraLargeText : 2rem ; 
+}
+
+main{
+  box-sizing: border-box;
+
+}
+
+/* EXTRA :  */
+input{
+    height: 2rem;
+    margin: 0.5rem 0px ;
+    font-size: var(--smallText);
+}
+
+
+ .clicked{
+    background-color: blue;
+ }
+ .btn{
+    font-size: var(--smallText);
+    padding: 0.5rem;
+ }
+
+/* EXTRA END  */
+
+
+.question-management{
+ display: flex;
+flex-direction:column ;
+justify-content: center;
+align-items: center;
+
+}
+.question-management__heading{
+text-align: center;
+}
+.question-management__form{
+
+width: 800px;
+padding: 0px 2rem;
+}
+.question-management__form-naming{
+    display: flex;
+    flex-direction: column;
+}
+.question-management__form-name{
+    
+}
+.question-management__form-description{
+    
+}
+
+/* QUESTIONS CONTAINER DIV  */
+.question-management__questions-container{
+
+}
+/* each item  */
+.question-management__question-item{
+  font-size: var(--mediumText);
+  margin: 1rem 0px;
+  border: 1px solid blue;
+  
+}
+
+.question-management__question-drag-handler{
+    text-align: center;
+    background-color: #e8e8e8;
+    font-size: var(--smallText);
+}
+.question-management__question-type-selector-container{
+
+    display: flex;
+    flex-wrap: wrap;
+  
+
+}
+.question-management__question-type-selector-container select{
+    font-size: var(--mediumText);
+    padding: 0.5rem;
+    text-transform: capitalize;
+
+}
+.question-management__question{
+  flex-grow: 1;
+}
+.question-management__question div{
+
+}
+.question-management__question input{
+width: 90%;
+}
+.question-management__type-selector-container{
+  
+
+}
+
+.question-management__question-actions-validations-container{
+    display: flex;
+    gap: 5px;
+}
+
+.question-management__question-options-container{
+
+}
+.dropdown-option-group{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.question-not-required{
+
+}
+.question-required{
+   background-color: blue;
+}
+
+/* VALIDATION CONTINAER  */
+.question-management__validation-display-container{
+    display: flex;
+   align-items: start;
+   gap: 10px;
+
+
+}
+.validation__question-type--select{
+    
+}
+.validation__options{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+}
+.validation-option input{
+  height: 1rem;
+  margin: 0px;
+}
+
+
+
+/* ADD BUTTON CONTAINER  */
+.question-management__question-add-btn-container{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+.question-management__question-action--add{
+  width: 15rem;
+}
+
+/* PREVIEW BUTTON   */
+.question-management__question-preview-btn-container{
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
+
+
+
+/* extra :  */
+.hidden{
+    display: none;
+}
+.question-preview{
+    display: none;
+}
+.hide-validation{
+    display: none;
+}

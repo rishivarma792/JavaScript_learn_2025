@@ -1,0 +1,32 @@
+<!-- 
+->to explare how submit of form works  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <!-- we use onsubmit event on form to handle submit event  -->
+        <form action="none" id="myform1" > 
+            <input type="text" placeholder="enter text">
+            <input type="submit">
+        </form>
+    </div>
+    <script>
+
+        let form1 = document.forms.myform1 ;
+        form1.onsubmit = function (e) {
+  e.preventDefault() ; 
+            alert("sumbitted");
+        } 
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./1.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="header">
+            ME
+        </div>
+        <div class="nav-list">
+            TimeSheet
+        </div>
+        <div class="main-content">
+
+            <div class="timesheet-details">
+                duration
+            </div>
+            <div class="timesheet">
+                <div class="timesheet-heading">
+                    <p>Time Sheet Entries</p>
+                    <p class="submit-status">
+                        Not Submitted
+                    </p>
+                </div>
+                <div class="entries">
+
+                    <div class="entry-heading">
+                        <p class="type eh">Type</p>
+                        <p class="activity eh important">Activity</p>
+                        <p class="task eh important">Task</p>
+                        <p class="task-details eh ">task details</p>
+                        <p class="start-time eh important">Start Time</p>
+                        <p class="end-time eh important">End Time</p>
+                        <p class="duration eh ">duration</p>
+                        <div class="actions eh">Actions</div>
+
+
+
+                    </div>
+                    <form action="" class="user-form" id="userForm">
+                        <div class="all-entries">
+                            <div class="user-entry ">
+                                <div class="type user-type">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <div class="activity">
+
+                                    <select name="activity" id="activity" class=" user-activity ">
+                                        <option value="training">training</option>
+                                        <option value="Break">Break</option>
+                                        <option value="hr activities">hr activities</option>
+                                        <option value="coe">coe</option>
+                                        <option value="miscelleneous">miscelleneous</option>
+                                    </select>
+                                </div>
+                                <div class="task">
+
+                                    <select name="task" id="task" class="user-task ">
+                                        <option value="session">session</option>
+                                        <option value="Doubt clarification">Doubt clarification</option>
+                                        <option value="discussion">1:1 discussion</option>
+                                        <option value="training preparation">Training preparation</option>
+                                        <option value="self learning">self learning</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="task-details">
+                                    <textarea type="text" name="task-details" class="task-details-text entry "
+                                        placeholder="enter details here "></textarea>
+
+                                    <div class="task-details-word-count">
+                                        <div>
+                                            <span class="count">0</sapn> / <span>255</span>
+                                        </div>
+                                        <div class="error-message">
+                                            this is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="start-time">
+                                    <input class="start-time-display entry" name="start-time" placeholder="Start time">
+                                    <div class="error-message">
+                                        this is required
+                                    </div>
+                                    <div class="start-time-dropdown time-dropdown">
+
+                                        <div class="start-time-hours ">
+                                            <i class="fa-solid fa-chevron-up arrow arrow-up"></i>
+                                            <div class="hours">9</div>
+                                            <i class="fa-solid fa-chevron-down arrow arrow-down  "></i>
+                                        </div>
+                                        <div>:</div>
+                                        <div class="start-time-minutes">
+                                            <i class="fa-solid fa-chevron-up arrow arrow-up"></i>
+                                            <div class="minutes">30</div>
+                                            <i class="fa-solid fa-chevron-down arrow arrow-down  "></i>
+                                        </div>
+                                        <div class="start-time-meridian">
+                                            <i class="fa-solid fa-chevron-up arrow arrow-up"></i>
+                                            <div class="meridian">AM</div>
+                                            <i class="fa-solid fa-chevron-down arrow arrow-down"></i>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="end-time">
+                                    <input class="end-time-display entry" name="end-time" placeholder="End time">
+                                    <div class="error-message">
+                                        this is required
+                                    </div>
+                                    <div class="end-time-dropdown time-dropdown">
+
+                                        <div class="end-time-hours">
+                                            <i class="fa-solid fa-chevron-up arrow arrow-up"></i>
+                                            <div class="hours">9</div>
+                                            <i class="fa-solid fa-chevron-down arrow arrow-down "></i>
+                                        </div>
+                                        <div>:</div>
+                                        <div class="end-time-minutes">
+                                            <i class="fa-solid fa-chevron-up arrow arrow-up"></i>
+                                            <div class="minutes">30</div>
+                                            <i class="fa-solid fa-chevron-down arrow  arrow-down "></i>
+                                        </div>
+                                        <div class="end-time-meridian">
+                                            <i class="fa-solid fa-chevron-up arrow arrow-up"></i>
+                                            <div class="meridian">AM</div>
+                                            <i class="fa-solid fa-chevron-down arrow arrow-down "></i>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="duration">
+                                    <div class="duration-display"> 0h 0m </div>
+
+                                </div>
+                                <div class="action">
+                                    <i class="fa-solid fa-trash delete-btn"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="add-new-entry">
+                            Add new entry
+                        </div>
+                        <div class="buttons-div">
+                            <button type="submit" class="submit-btn btn">Submit</button>
+                            <button class="save-btn btn">Save</button>
+                            <button class="cancel-btn btn">Cancel</button>
+
+                        </div>
+
+
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="./1.js"></script>
+</body>
+
+</html>

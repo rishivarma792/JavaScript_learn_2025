@@ -1,0 +1,43 @@
+<!-- 
+->CASE 1 : to prevent defualt which make cut copy paste not pssible  
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="case-1">
+        <p>this is the text 
+            <input type="text">
+        </p>
+    </div>
+
+    <script>
+        // CASE 1 : 
+        let p1=  document.querySelector(".case-1 p") ; 
+
+        p1.oncopy = function (e) {
+   
+             e.preventDefault() ;
+             alert("cant copy") ; // it show alert when copied 
+            //  using getselction 
+            console.log(window.getSelection().toString());
+        }
+        p1.onpaste = function (e){
+            alert("paste");
+             console.log(e.clipboardData);
+            //  TO GET PASTE DATA USE 
+            console.log(e.clipboardData.getData("text/plain")); 
+             e.preventDefault();
+        }
+    </script>
+    
+</body>
+</html>
